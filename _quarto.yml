@@ -1,0 +1,26 @@
+project:
+  type: book
+
+book:
+  title: "edi_metadata_guides"
+  author: "Norah Jones"
+  date: "9/29/2024"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+execute:
+  freeze: auto
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+
+
