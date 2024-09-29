@@ -12,6 +12,7 @@ book:
   repo-actions: [edit, issue]
   chapters:
     - index.qmd
+    - about.qmd
     - intro.qmd
     - summary.qmd
     - references.qmd
