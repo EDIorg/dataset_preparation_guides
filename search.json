@@ -4,9 +4,19 @@
     "href": "index.html",
     "title": "EDI’s Collected Dataset Preparation Guides",
     "section": "",
-    "text": "Preface\nThis is a Quarto book dude.\nTo learn more about Quarto books visit https://quarto.org/docs/books.",
+    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.",
     "crumbs": [
       "Preface"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About This Site",
+    "section": "",
+    "text": "Warning\n\n\n\nThis documentation for the site is out of date. We are transitioning to a Quarto site.\n\n\n\nGeneral\n\nGit repository: https://github.com/EDIorg/data-package-best-practices\nAll pages can be edited in markdown\n\nServed as gh-pages (from the docs dir)\n\nContributions can be from many (via fork and pull request), moderated by a committee\n\n\nSection organization\n\nIndex section\n\nA very few pages of introductory material (including this page) and a navigation menu\nBased on a fork of http://bruth.github.io/jekyll-docs-template/\nChanges (after pushed to github) are public immediately\n\n\n\n\nBest Practice sections\n\nComposed of multiple sections, each composed of multiple pages and moderated by the appropriate committee\nEach section is generated as a separate “book”, with R-bookdown (a wrapper for pandoc, in R)\nEdited pages do not become public until the book is rebuilt\nWe use bookdown here to support these objectives:\n\nPages can remain in development until they are explicitly posted, e.g., after moderation and build\nPDFs can be generated as needed for citable versions\n\ne.g., “Best Practices for EML metadata, V 4”, anticipated in early 2020\n\n\n\n\n\n\n\nInstructions\n\nIndex section\n\nHow to add new pages to the Index section\n\nFork the repository\nAdd a file to the /docs/_posts directory. Since the template is blog-based, we follow the convention YYYY-MM-DD-name-of-post.md\n\nOption 1: do it manually and include the necessary front matter. Take a look at the source for this page to see how it works\nOption 2: use the script to generate an empty file with front matter. The advantage of using the script is that it automatically creates a soft link in the _pages directory without the date, which makes editing easier. If you want to control order, add the order to the front matter. Example: bash-3.2$ ./bin/jekyll-page \"About This Website\" about\n\n\n\n\nHow to Link\nFiles are in markdown, which means you can include HTML. Use site tokens whenever possible. See Markdown Basics for more info.\n\nlink to a file: &lt;a href=\"{{ site.baseurl }}/files/966.pdf\"&gt;link to 966.pdf&lt;/a&gt;\nlink to an image:  end of img.\n\nMenu navigation is controlled by categories, labeled in the _config.yml and assigned in each page’s front matter. We are currently using only two navigation sections: - tut, for BP-templates, how-tos for markdown,\n- about, general info on how this website is generated (this page).\nSee the _config.yml for the navigation sections (and other site-wide material, like tokens)\n\n\n\nBP sections:\nThe major sections of this site are written in Markdown, and transformed to HTML with the R bookdown package.\nInstructions for using bookdown can be found with other information for contributors, under “Using Bookdown”\nRemember: each BP book is independent.",
+    "crumbs": [
+      "About This Site"
     ]
   },
   {
