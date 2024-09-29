@@ -1,10 +1,15 @@
 project:
   type: book
+  output-dir: _book
 
 book:
-  title: "edi_metadata_guides"
-  author: "Norah Jones"
+  title: "EDI's Collected Dataset Preparation Guides"
   date: "9/29/2024"
+  favicon: edi-logo.png
+  site-url: https://ediorg.github.io/dataset_preparation_guides
+  repo-url: https://github.com/ediorg/dataset_preparation_guides
+  repo-branch: main
+  repo-actions: [edit, issue]
   chapters:
     - index.qmd
     - intro.qmd
