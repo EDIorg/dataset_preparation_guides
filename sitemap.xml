@@ -2,22 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ediorg.github.io/dataset_preparation_guides/index.html</loc>
-    <lastmod>2024-09-29T23:22:12.250Z</lastmod>
+    <lastmod>2024-09-30T05:28:17.037Z</lastmod>
   </url>
   <url>
     <loc>https://ediorg.github.io/dataset_preparation_guides/about.html</loc>
-    <lastmod>2024-09-29T23:22:12.249Z</lastmod>
+    <lastmod>2024-09-30T05:28:17.035Z</lastmod>
   </url>
   <url>
-    <loc>https://ediorg.github.io/dataset_preparation_guides/intro.html</loc>
-    <lastmod>2024-09-29T23:22:12.250Z</lastmod>
+    <loc>https://ediorg.github.io/dataset_preparation_guides/eml-best-practices.html</loc>
+    <lastmod>2024-09-30T05:28:17.037Z</lastmod>
   </url>
   <url>
-    <loc>https://ediorg.github.io/dataset_preparation_guides/summary.html</loc>
-    <lastmod>2024-09-29T23:22:12.250Z</lastmod>
+    <loc>https://ediorg.github.io/dataset_preparation_guides/dataset-design-special-cases.html</loc>
+    <lastmod>2024-09-30T05:28:17.036Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ediorg.github.io/dataset_preparation_guides/scientific-domain.html</loc>
+    <lastmod>2024-09-30T05:28:17.038Z</lastmod>
   </url>
   <url>
     <loc>https://ediorg.github.io/dataset_preparation_guides/references.html</loc>
-    <lastmod>2024-09-29T23:22:12.250Z</lastmod>
+    <lastmod>2024-09-30T05:28:17.037Z</lastmod>
   </url>
 </urlset>
