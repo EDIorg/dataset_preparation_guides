@@ -1,129 +1,5 @@
-# EML Best Practices
 
-This document contains current 'Best Practice' recommendations for EML content for metadata related to ecological and environmental data. It is intended to augment the EML schema documentation [@EML_2019] for a less-technical audience. This is one component of several resources available to EML preparers. These recommendations are directed towards the following goals:
-
-- Provide guidance and clarification in the implementation of EML for datasets
-- Minimize heterogeneity of EML documents to simplify development and re-use of software built to ingest it
-- Maximize interoperability of EML documents to facilitate data synthesis
-
-## Introduction {-}
-
-EML Best Practice recommendations have evolved over time. The most active contributors have been members of the LTER Information Managers Committee in multiple working groups and workshops. EML has been widely used for several years with multiple applications written against it, and the community has had the opportunity to observe the consequences of many content patterns. As much as possible, recommendations have been aligned with those experiences, as well as with the capability of data contributors.
-
-Timeline and Previous Revisions
-
-- 2017 Best Practices for Dataset Metadata in EML v3 (this document)
-- 2016 EDI inception, see http://edirepository.org
-- 2011 EML Best Practices for LTER sites v2
-- 2008 EML 2.1 release
-- 2004 EML Best Practices for LTER sites
-- 2003 LTER adopts EML as network exchange standard
-
-Contributors, including LTER EML Best Practices Working Groups and workshops in 2003, 2004, 2010 (alphabetical order):
-
-- Dan Bahauddin
-- Barbara Benson
-- Emery Boose
-- James Brunt
-- Duane Costa
-- Corinna Gries
-- Don Henshaw
-- Margaret O'Brien
-- Ken Ramsey
-- Inigo San Gil
-- Mark Servilla
-- Wade Sheldon
-- Philip Tarrant
-- Theresa Valentine
-- John Vande Castle,
-- Kristin Vanderbilt
-- Jonathan Walsh
-- Yang Xia
-
-
-## Conventions and Definitions {-}
-
-
-### Audience
-
-This document is intended for data managers. It assumes that readers are familiar with
-
-- the basic structure of an XML document, and the ability to edit in an XML
-  editor like OxygenXML or XMLSpy.
-- the process for contributing data to a repository. If you reached this
-  document from a repository's help-page, contact them for more information.
-
-### Fonts and typeface
-
-Numbered examples of EML nodes are in fixed-width font:
-
-```{.xml}
-<?xml version="1.0" encoding="UTF-8"?>
-```
-
-XML element and attribute names, XPath and references to element names
-in text are in bold face. Single element names are surrounded by angle
-brackets, as they appear in XML.
-
-<**dataTable**>  
-**/eml:eml/\@packageId**
-
-Some recommendations have special context, e.g., an XML element or
-attribute may be requested by a community (e.g., LTER), or required by
-the EDI repository (but not by other repositories).
-
-_Context notes: Recommendations for EML usage in a specific context are
-called "context notes", and are placed in separate paragraphs, in
-italic._
-
-### Definitions
-
-<dl>
-  <dt>EML preparer</dt>
-  <dd>the person responsible for "building" the EML metadata
-record. Generally, this is a data manager working with a project or
-physical site that produces data.</dd>
-
-  <dt>Contributor</dt>
-  <dd>the research project contributing the data package, e.g.,
-an LTER or OBFS site, or a Macrosystems project. Generally, the "EML
-preparer" works with or for the "Contributor."</dd>
-
-  <dt>Data package</dt>
-  <dd>the EML metadata together with its entity or entities.
-This is generally the unit housed in repositories. We use this term to
-avoid confusion with the EML element "<b>dataset</b>".</dd>
-</dl>
-
-### Other EML Resources
-
-Some sections refer to further information or tools. These can be found
-on the EDI website, under "Resources", at
-[https://edirepository.org](https://edirepository.org)
-
-## General Recommendations {-}
-
-Following are general best practices for handling EML dataset metadata:
-
-### Metadata Distribution
-
-Do not publicly distribute EML documents containing elements with incorrect information, e.g., as a workaround for missing metadata or to meet validation requirements. Pre-publication drafts, or EML produced for demonstration or testing purposes should be clearly identified as such and not contributed to public archives, because these are passed on to large-scale clearinghouses. For previews of drafts or handling test and demonstration data packages, consult your repository to learn about options.
-
-### Data Package Identifiers
-
-Metadata and data set versioning are controlled by the contributor, and so identifiers are tied to local systems. Many repository systems that accept EML-described data support principles of immutable metadata and data entity versioning. EML has elements to contain package identifiers, although these may also be assigned externally. It is the responsibility of the submitters to understand the practices of their intended repository when using identifiers.
-
-### High-priority Elements
-
-- To support locating data by time, geographic location, and   taxonomically, metadata should provide as much information as   possible for the data package, in the three <**coverage**>;   elements:
-  - <**temporalCoverage**>; (when),
-  - <**geographicCoverage**>; (where) and 
-  - <**taxonomicCoverage**> (what).
-- For a potential user to evaluate the relevance and usability of the   data package for their research study or synthesis projects,   metadata should include detailed descriptions in the   
-  - <**project**>,
-  - <**methods**>,
-  - <**protocols**>, and
-  - <**intellectualRights**> elements.
+# Content recommendations for Elements and Attributes
 
 ## The root element: \<eml:eml> {#Root_element .unnumbered}
 
@@ -131,37 +7,23 @@ This element is the root element in all EML documents. The XPath
 notation is:
 **/eml:eml**
 
-The root element holds two important parts, both of which are optional,
-but recommended.
+The root element holds two important parts, both of which are optional, but recommended.
 
 ### \@schemaLocation (XML attribute)
 
 This attribute is this location (XPath):  
 **/eml:eml/\@schemaLocation**
 
-The schemaLocation attribute tells a processor the name of the schema to
-which the EML document belongs and where to find it. Most repositories
-check schema compliance when data packages are deposited, but it is
-highly recommended that data managers know how and where to specify the
-schema that their metadata document should adhere to. This way, they can
-validate their own work in progress, e.g., through an XML editor like
-OxygenXML.
+The schemaLocation attribute tells a processor the name of the schema to which the EML document belongs and where to find it. Most repositories check schema compliance when data packages are deposited, but it is highly recommended that data managers know how and where to specify the schema that their metadata document should adhere to. This way, they can validate their own work in progress, e.g., through an XML editor like OxygenXML.
 
 ### \@packageId (XML attribute)
 
 This attribute is found at this location (XPath):  
 **/eml:eml/\@packageId**
 
-As outlined elsewhere, EML preparers should manage unique identifiers
-and versioning at the local level (see **\@system** discussion below).
-The **packageId** attribute can be used to contain the same identifier
-as is used by the repository.
+As outlined elsewhere, EML preparers should manage unique identifiers and versioning at the local level (see **\@system** discussion below). The **packageId** attribute can be used to contain the same identifier as is used by the repository.
 
-_Context Note: The packageID attribute is required in all EML documents
-submitted to the EDI repository. It is entered into the repository software, 
-and theformat is standardized to three parts: scope, package-number, revision.
-The scope should be "edi" unless another scope is justified by prior
-arrangement. See Example 1._
+_Context Note: The packageID attribute is required in all EML documents submitted to the EDI repository. It is entered into the repository software, and theformat is standardized to three parts: scope, package-number, revision. The scope should be "edi" unless another scope is justified by prior arrangement. See Example 1._
 
 
 Example 1: attributes packageId, id, system, and scope
@@ -180,10 +42,9 @@ Example 1: attributes packageId, id, system, and scope
 ```
 
 
-## Top Level Elements {-}
+## Top Level Elements
 
-An EML **dataset** is composed of up to three elements under the root
-element (<**eml:eml**>):
+An EML **dataset** is composed of up to three elements under the root element (<**eml:eml**>):
 
 <**access**> More information: [access](#access)  
 <**dataset**>  More information: [dataset](#dataset)
@@ -357,7 +218,7 @@ Example 25: additionalMetadata custom unit
 ```
 
 
-## title (dataset) {-}
+## title (dataset)
 
 The dataset title element is found at this location (XPath):  
 **/eml:eml/ dataset/title**  
@@ -379,7 +240,7 @@ Example 3: dataset, alternateIdentifier, shortName, title
 ```
 
 
-## People and Organizations (Parties) {-}
+## People and Organizations (Parties)
 
 People and organizations are all described using a "ResponsibleParty"
 group of elements, which is found at these locations (XPath):  
@@ -648,7 +509,7 @@ Example 8: publisher
 
 
 
-## pubDate {-}
+## pubDate
 
 This element is found at this location (XPath):  
 **/eml:eml/dataset/pubDate**
@@ -665,7 +526,7 @@ are to enhance discovery.
 
 
 
-## abstract {-}
+## abstract
 
 This element is found at these locations (XPath):  
 **/eml:eml/dataset/abstract**  
@@ -685,7 +546,7 @@ nitrate, phosphate, calcium, etc.), in combination with the parameters
 that seem most relevant for searches.
 
 
-## keywordSet and keyword {-}
+## keywordSet and keyword
 
 This element is found at these locations (XPath):  
 **/eml:eml/dataset/keywordSet**  
@@ -746,7 +607,7 @@ Example 9: pubDate, abstract,keywordSet, keyword
 </keywordSet>
 ```
 
-## intellectualRights {-}
+## intellectualRights
 
 This element is found at this location (XPath):  
 **/eml:eml/dataset/intellectualRights**
@@ -788,7 +649,7 @@ Example 10: intellectualRights
 </intellectualRights>
 ```
 
-## distribution {-}
+## distribution
 
 This element is found at these locations (XPath):  
 **/eml:eml/dataset/distribution**  
@@ -886,7 +747,7 @@ Example 11b: distribution at the data entity level
 </dataTable>
 ```
 
-## coverage {-}
+## coverage
 
 This element is found at these locations (XPath):  
 **/eml:eml/dataset/coverage**  
@@ -1219,7 +1080,7 @@ Example 15: taxonomicCoverage
 ```
 
 
-## maintenance {-}
+## maintenance
 
 This element is found at these locations (XPath):  
 **eml:eml/dataset/maintenance**
@@ -1242,7 +1103,7 @@ Example 16: maintenance
 </maintenance>
 ```
 
-## methods {-}
+## methods
 
 This element is found at these locations (XPath):  
 **/eml:eml/dataset/methods**  
@@ -1467,7 +1328,7 @@ Example 18: methods, with dataSource
 ```
 
 
-## project {-}
+## project
 
 This element is found at this location (XPath):  
 **/eml:eml/dataset/project**
@@ -1550,7 +1411,7 @@ Example 19: project
 </project>
 ```
 
-## [entity] = dataTable, spatialRaster, spatialVector, storedProcedure, view, otherEntity {-}
+## [entity] = dataTable, spatialRaster, spatialVector, storedProcedure, view, otherEntity
 
 This element is found at this location (XPath):  
 **/eml:eml/dataset/dataTable**  
@@ -1807,7 +1668,7 @@ Table 2. Elements specific to each of the six entity types.
   </tr>
 </table>
 ```
-## attributeList {-}
+## attributeList
 
 This element tree is found at (XPath):  
 **/eml:eml/dataset/dataTable/attributeList**  
@@ -2329,7 +2190,7 @@ Table 3. Entity types and format names for some <**otherEntity**> types.
 ```
 
 
-## constraint {-}
+## constraint
 
 This element tree is found at (XPath):  
 **/eml:eml/dataset/dataTable/constraint**  

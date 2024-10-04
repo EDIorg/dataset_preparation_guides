@@ -1,0 +1,8 @@
+# Scientific domain specific metadata guide {.unnumbered}
+
+This document contains current recommendations for data packages from specific scientific domains. Not all domains are covered.
+See navigation menu.
+
+## Ecological community surveys
+
+DRAFT DRAFT DRAFT

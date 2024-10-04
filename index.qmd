@@ -25,7 +25,7 @@ Considerations for a well designed data package including special cases based on
 
 **[Recommendations for data package design](guide-special-cases/dataset-design-special-cases.qmd)**
 
-## [Data Products for Synthesis Research](guide-domain-specific/scientific-domain.qmd)
+### [Data Products for Synthesis Research](guide-domain-specific/scientific-domain.qmd)
 Recommendations for community developed data products. The data packages are derived from raw data and reformatted to meet certain data harmonization standards. Many of these data products have extensive related code bases, which recommendations can take into account and link to. 
 
 **[Recommendations for data products from specific scientific domains](guide-domain-specific/scientific-domain.qmd)**

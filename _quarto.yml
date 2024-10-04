@@ -15,9 +15,19 @@ book:
   chapters:
     - index.qmd
     - about.qmd
-    - guide-eml-bp/eml-best-practices.qmd
-    - guide-special-cases/dataset-design-special-cases.qmd
-    - guide-domain-specific/scientific-domain.qmd
+
+    - part: guide-eml-bp/preface.qmd
+      chapters:
+        - guide-eml-bp/introduction.qmd
+        - guide-eml-bp/content-recommendations.qmd
+
+    - part: guide-special-cases/preface.qmd
+      chapters: 
+        - guide-special-cases/dataset-design-special-cases.qmd
+
+    - part: guide-domain-specific/preface.qmd
+      chapters:
+        - guide-domain-specific/scientific-domain.qmd
     - references.qmd
 
 execute:
