@@ -3,8 +3,7 @@
 
 ## The root element: \<eml:eml> {#Root_element .unnumbered}
 
-This element is the root element in all EML documents. The XPath
-notation is:
+This element is the root element in all EML documents. The XPath notation is:
 **/eml:eml**
 
 The root element holds two important parts, both of which are optional, but recommended.
@@ -26,6 +25,45 @@ As outlined elsewhere, EML preparers should manage unique identifiers and versio
 _Context Note: The packageID attribute is required in all EML documents submitted to the EDI repository. It is entered into the repository software, and theformat is standardized to three parts: scope, package-number, revision. The scope should be "edi" unless another scope is justified by prior arrangement. See Example 1._
 
 
+## Top Level Elements
+
+An EML **dataset** is composed of up to three elements under the root element (<**eml:eml**>):
+
+<**access**> More information: [access](#access)  
+<**dataset**>  More information: [dataset](#dataset)
+<**additionalMetadata**>More information: [additionalMetadata](#additionalMetadata)
+
+### id, system and scope attributues (XML attribute-group)
+
+This attribute group can be used on these EML elements:
+<**access**>
+<**dataset**>
+<**creator**>
+<**associatedParty**>
+<**contact**>
+<**metadataProvider**>
+<**publisher**>
+<**coverage**>
+<**geographicCoverage**>
+<**temporalCoverage,**>
+<**taxonomicCoverage**>
+<**distribution**>
+<**software**>
+<**citation**>
+<**protocol**>
+<**project**>
+<**dataTable**>
+<**otherEntity**>
+<**spatialRaster**>
+<**spatialReference**>
+<**spatialVector**>
+<**storedProcedure**>
+<**view**>
+<**attribute**>
+<**constraint**>
+
+These three attributes are found as a group and are usually optional. The primary use of the id attribute is as an internal reference, hence each id must be unique within one EML document. E.g.,. a <**creator**> must have a different id than a <**dataTable**>. And if the same person appears in seberal places (at dataset/creator, protocol/creator or project/creator, the same id cannot be repeated, so either the content of the id must be changed or a reference used for repeated instances. This restriction can cause problems when content is drawn from a system with IDs (e.g. a personnel database), and is under consideration by the EML developers. Ideally the three attributes would work together. The scope attribute can have one of two values, “system” or “document”. It is preferred that when the scope is set to “system”, that the system attribute defines the ID-system, the id attribute content is (presumably) from that system. Currently, a reasonable general practice should be to define a system on the <**eml:eml**> element and set it to the site (but not set the system attribute at any other level), and to set scope=“document” on elements other than <**eml:eml**>.
+
 Example 1: attributes packageId, id, system, and scope
 ```{.xml}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -40,15 +78,6 @@ Example 1: attributes packageId, id, system, and scope
    system="FLS"
    scope="system">
 ```
-
-
-## Top Level Elements
-
-An EML **dataset** is composed of up to three elements under the root element (<**eml:eml**>):
-
-<**access**> More information: [access](#access)  
-<**dataset**>  More information: [dataset](#dataset)
-<**additionalMetadata**>More information: [additionalMetadata](#additionalMetadata)
 
 ### access {#access}
 
@@ -166,6 +195,8 @@ Example 3: dataset, alternateIdentifier, shortName, title
 
 ### additionalMetadata {#additionalMetadata}
 
+[*Editor's note*: For the online version this section was moved here from the end of the original document.]
+
 This element tree is found at (XPath):  
 **eml:eml/additionalMetadata**
 
@@ -216,29 +247,6 @@ Example 25: additionalMetadata custom unit
    </metadata>
 </additionalMetadata>
 ```
-
-
-## title (dataset)
-
-The dataset title element is found at this location (XPath):  
-**/eml:eml/ dataset/title**  
-**/eml:eml/method/methodStep/protocol/title**  
-**/eml:eml/project/title**
-
-The dataset <**title**> should be descriptive and should mention the
-data collected, geographic context, research site, and time frame (what,
-where, and when).
-
-
-Example 3: dataset, alternateIdentifier, shortName, title
-```{.xml}
-<dataset id="FLS-1" system="FLS" scope = "system">
-   <alternateIdentifier>FLS-1</alternateIdentifier>
-   <shortName>Arthropods</shortName>
-   <title>Long-term Ground Arthropod Monitoring Dataset at Ficity, USA
-      from 1998 to 2003</title>
-```
-
 
 ## People and Organizations (Parties)
 
@@ -499,15 +507,12 @@ the organization's name (<**organizationName**>). Complete the
 displays may use this element, although typically, the repository
 becomes the publisher in citations.
 
-
 Example 8: publisher
 ```{.xml}
 <publisher>
    <organizationName>Fictitious LTER site</organizationName>
 </publisher>
 ```
-
-
 
 ## pubDate
 
@@ -523,7 +528,6 @@ additions to an ongoing time series). There is an argument for
 **pubDate** referring to original date of release, but this is probably
 only useful for static data packages, or if the only metadata changes
 are to enhance discovery.
-
 
 
 ## abstract
@@ -659,6 +663,9 @@ The <**distribution**> element can appear at both the dataset and
 entity levels. 
 
 ### Dataset level
+
+[*Editor's note*: This section has been added to the online version since release.]
+
 At the dataset level, the `<distribution>` element should be used for information only, 
 because it applies to the entire package, not only to one entity.
 
@@ -714,6 +721,7 @@ a dataTable at /eml:eml/dataset/dataTable/physical/distribution/url).
 The URL must include the function attribute with the value "download"
 (or empty, i.e., defaults to "download")._
 
+[*Editor's note*: The context note below has been added to the online version.]
 _Context: The EDI repository system has alternatives for uploading data
 entities if you do not have a server which can deliver entities via a URL (http). 
 Contact EDI for more information on these options._
@@ -793,8 +801,6 @@ there are significant distances between study sites and grouping them in
 one bounding box would be misleading or confusing. For example, a
 cross-site study should have bounding boxes for each site.
 
-
-
 Example 12: geographicCoverage at the dataset level
 ```{.xml}
 <coverage>
@@ -817,13 +823,10 @@ Example 12: geographicCoverage at the dataset level
 </coverage>
 ```
 
-
 If sampling took place in discrete point location, those sites should
 also appear with or without a bounding box. Individual sampling sites
 may also be be entered under <**spatialSamplingUnits**>, each site in
 a separate coverage element (see below).
-
-
 
 Example 13: geographicCoverage under spatialSamplingUnits
 ```{.xml}
@@ -857,8 +860,6 @@ Example 13: geographicCoverage under spatialSamplingUnits
    </coverage>
 </spatialSamplingUnits>
 ```
-
-
 Latitudes and longitudes should be in the same datum, commonly used
 (i.e., all values in WGS84 or NAD83) and expressed to at least six
 decimal places (the EML2.1 schema enforces decimal content).
@@ -932,8 +933,6 @@ no data are yet available. Use the <**maintanence**> tag (below) to
 describe the update frequency. The methods/sampling tree should be used
 to describe the ongoing nature of the data collection.
 
-
-
 Example 14: temporalCoverage
 ```{.xml}
 <temporalCoverage>
@@ -947,7 +946,6 @@ Example 14: temporalCoverage
    </rangeOfDates>
 </temporalCoverage>
 ```
-
 
 ### taxonomicCoverage
 
@@ -988,8 +986,6 @@ listed in <**taxonomicProcedures**> are details of specimen
 processing, keys, and chemical or genetic analyses.
 <**taxonomicCompleteness**> may be used to document the status,
 estimated importance, and reason for incomplete identifications.
-
-
 
 Example 15: taxonomicCoverage
 ```{.xml}
@@ -1079,7 +1075,6 @@ Example 15: taxonomicCoverage
 </taxonomicCoverage>
 ```
 
-
 ## maintenance
 
 This element is found at these locations (XPath):  
@@ -1090,7 +1085,6 @@ changes to the data tables or metadata, including update frequency. The
 change history can also be used to describe alterations in static
 documents. The description element (TextType) can contain both formatted
 and unformatted text blocks.
-
 
 Example 16: maintenance
 ```{.xml}
@@ -1207,8 +1201,6 @@ used at the dataset, entity or attribute level, whichever is
 appropriate. At its most basic, use the <**description**> element.
 Tags are also available for a <**citation**> or <**protocol**>.
 
-
-
 Example 17: methods
 ```{.xml}
 <methods>
@@ -1294,8 +1286,6 @@ Example 17: methods
 ```
 
 
-
-
 Example 18: methods, with dataSource
 ```{.xml}
 <methods>
@@ -1326,7 +1316,6 @@ Example 18: methods, with dataSource
    </methodStep>
 </methods>
 ```
-
 
 ## project
 
@@ -1523,6 +1512,8 @@ exported as text from a database. The <**objectName**> often is the
 filename of a file in a file system or that is accessible on the
 network.
 
+[*Editor's note*: The recommendation below has changed in the online version.]
+
 <**externallyDefinedFormat**> For data entities in prescribed formats
 (e.g., NetCDF, KML, Excel), name that format in **externallyDefinedFormat/formatName**.
 It is recommended that where possible, formats are drawn from formatNames in
@@ -1557,8 +1548,6 @@ the dataset level for more information.
 <**additionalInfo**> is a text field for any material that cannot be
 characterized by the other elements for the data type.
 
-
-
 Example 20: The elements in the EntityGroup, showing the <dataTable> entity.
 ```{.xml}
 <dataTable>
@@ -1590,7 +1579,6 @@ Example 20: The elements in the EntityGroup, showing the <dataTable> entity.
    </physical>
 </dataTable>
 ```
-
 
 Each data type has a specific set of elements that follow the common
 elements. Table 2 shows the specific trees that are applied to each of
@@ -1714,7 +1702,7 @@ are drawn for the attribute. EML's attribute-unit model is described in
 detail; see "Other Resources". One of the 5 scale types must be used:
 nominal, ordinal, interval, ratio, or dateTime, as follows:
 
-##### Non-numeric types:
+### Non-numeric types:
 
 The <**nominal**> scale is used to represent named categories. Values are
 assigned to distinguish them from other observations. This would include
@@ -1735,7 +1723,7 @@ explanations. For <**textDomain**> an optional pattern may describe
 the text, e.g., a US telephone number can be described by the format
 "\\d\\d\\d-\\d\\d\\d-\\d\\d\\d\\d".
 
-##### Numeric types:
+### Numeric types:
 
 <**interval**> measurements are ordinal, but in addition, use
 equal-sized units on a scale between values. Because the units are equal
@@ -1833,8 +1821,6 @@ The examples show two attribute trees. The first was generated from an
 SQL system with a defined storage type. The second <**attributeList**>
 includes tags for <**customUnits**>, with the Unit defined in the
 <**additionalMetadata**> tree.
-
-
 
 Example 21: attributeList/attribute dataTable
 ```{.xml}
@@ -1963,8 +1949,6 @@ The examples below show complete entity trees for <**spatialVector**>
 and <**spatialRaster**> converted via XSLT (stylesheet) from Esri
 metadata format. For details see "Other Resources".
 
-
-
 Example 22: Entity and attribute information for spatialVector
 ```{.xml}
 <spatialVector id="Landuse for Ficity in 1955">
@@ -2058,8 +2042,6 @@ Example 22: Entity and attribute information for spatialVector
 ```
 
 
-
-
 Example 23: Entity and attribute information for spatialRaster
 ```{.xml}
 <spatialRaster id="fi_24k">
@@ -2148,10 +2130,11 @@ Example 23: Entity and attribute information for spatialRaster
    <cellGeometry>matrix</cellGeometry>
 </spatialRaster>
 ```
+[*Editor's note*: The following section on otherEntity is has been added to the online version and is not present in early published copies of this document.]
 
 The <**otherEntity**> data type includes the free text <**entityType**> element for naming the type of the entity.
 The **otherEntity/physical/dataFormat/externallyDefinedFormat/formatName** element stores the file format.
-While there is no controlled vocabulary for the content of these elements, format names can be drawn from [DataONE's objectFormaList](https://cn.dataone.org/cn/v2/formats).  Table 3 provides suggestions for some common other entity formats.
+While there is no controlled vocabulary for the content of these elements, format names can be drawn from [DataONE's objectFormatList](https://cn.dataone.org/cn/v2/formats).  Table 3 provides suggestions for some common other entity formats.
 
 Table 3. Entity types and format names for some <**otherEntity**> types.
 ```{=html}
@@ -2188,7 +2171,6 @@ Table 3. Entity types and format names for some <**otherEntity**> types.
   </tr>
 </table>
 ```
-
 
 ## constraint
 
