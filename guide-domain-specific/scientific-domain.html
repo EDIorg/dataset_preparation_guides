@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Best practice recommendations for data packages, described by Ecological Metadata Language (EML).">
+<meta name="description" content="Best practice recommendations for data packages, described by Ecological Metadata Language (EML). 2022-05-25 version">
 
-<title>3&nbsp; Scientific Domain – Data Package Best Practices</title>
+<title>4&nbsp; Introduction – Data Package Best Practices</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,25 +24,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
-<link href="./dataset-design-special-cases.html" rel="prev">
-<link href="./edi-logo.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../references.html" rel="next">
+<link href="../guide-domain-specific/preface.html" rel="prev">
+<link href="../edi-logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./scientific-domain.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Scientific Domain</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide-domain-specific/preface.html">Scientific domain specific metadata guide</a></li><li class="breadcrumb-item"><a href="../guide-domain-specific/scientific-domain.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -98,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Data Package Best Practices</a> 
+      <a href="../">Data Package Best Practices</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/ediorg/dataset_preparation_guides" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
 </div>
@@ -113,37 +113,76 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./about.html" class="sidebar-item-text sidebar-link">
+  <a href="../about.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About This Site</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../guide-eml-bp/preface.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Best Practices for Dataset Metadata in Ecological Metadata Language (EML)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./eml-best-practices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">EML Best Practices</span></span></a>
+  <a href="../guide-eml-bp/introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dataset-design-special-cases.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data Package Design for Special Cases</span></span></a>
+  <a href="../guide-eml-bp/content-recommendations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Content recommendations for Elements and Attributes</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../guide-special-cases/preface.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Package Design for Special Cases</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./scientific-domain.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Scientific Domain</span></span></a>
+  <a href="../guide-special-cases/dataset-design-special-cases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../guide-domain-specific/preface.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Scientific domain specific metadata guide</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide-domain-specific/scientific-domain.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -157,33 +196,43 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#ecological-community-surveys" id="toc-ecological-community-surveys" class="nav-link active" data-scroll-target="#ecological-community-surveys"><span class="header-section-number">3.1</span> Ecological community surveys</a>
+  <li><a href="#authors" id="toc-authors" class="nav-link active" data-scroll-target="#authors"><span class="header-section-number">4.1</span> Authors</a></li>
+  <li><a href="#anticipated-use-cases" id="toc-anticipated-use-cases" class="nav-link" data-scroll-target="#anticipated-use-cases"><span class="header-section-number">4.2</span> Anticipated use cases</a>
   <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">3.1.1</span> Introduction</a></li>
-  <li><a href="#authors" id="toc-authors" class="nav-link" data-scroll-target="#authors"><span class="header-section-number">3.1.2</span> Authors</a></li>
-  <li><a href="#anticipated-use-cases" id="toc-anticipated-use-cases" class="nav-link" data-scroll-target="#anticipated-use-cases"><span class="header-section-number">3.1.3</span> Anticipated use cases</a></li>
-  <li><a href="#definitions-and-conventions" id="toc-definitions-and-conventions" class="nav-link" data-scroll-target="#definitions-and-conventions"><span class="header-section-number">3.1.4</span> Definitions and conventions</a></li>
-  <li><a href="#recommendations-for-datasets" id="toc-recommendations-for-datasets" class="nav-link" data-scroll-target="#recommendations-for-datasets"><span class="header-section-number">3.1.5</span> Recommendations for datasets</a></li>
+  <li><a href="#synthesis" id="toc-synthesis" class="nav-link" data-scroll-target="#synthesis"><span class="header-section-number">4.2.1</span> Synthesis</a></li>
+  <li><a href="#harmonization" id="toc-harmonization" class="nav-link" data-scroll-target="#harmonization"><span class="header-section-number">4.2.2</span> Harmonization</a></li>
+  <li><a href="#external-applications" id="toc-external-applications" class="nav-link" data-scroll-target="#external-applications"><span class="header-section-number">4.2.3</span> External applications</a></li>
   </ul></li>
-  <li><a href="#meteorology-and-hydrology-data" id="toc-meteorology-and-hydrology-data" class="nav-link" data-scroll-target="#meteorology-and-hydrology-data"><span class="header-section-number">3.2</span> Meteorology and Hydrology data</a>
+  <li><a href="#definitions-and-conventions" id="toc-definitions-and-conventions" class="nav-link" data-scroll-target="#definitions-and-conventions"><span class="header-section-number">4.3</span> Definitions and conventions</a></li>
+  <li><a href="#recommendations-for-datasets" id="toc-recommendations-for-datasets" class="nav-link" data-scroll-target="#recommendations-for-datasets"><span class="header-section-number">4.4</span> Recommendations for datasets</a>
   <ul class="collapse">
-  <li><a href="#introduction-1" id="toc-introduction-1" class="nav-link" data-scroll-target="#introduction-1"><span class="header-section-number">3.2.1</span> Introduction</a></li>
-  <li><a href="#recommendations-for-datasets-1" id="toc-recommendations-for-datasets-1" class="nav-link" data-scroll-target="#recommendations-for-datasets-1"><span class="header-section-number">3.2.2</span> Recommendations for datasets</a></li>
+  <li><a href="#sampling-methods" id="toc-sampling-methods" class="nav-link" data-scroll-target="#sampling-methods"><span class="header-section-number">4.4.1</span> Sampling methods</a></li>
+  <li><a href="#dates" id="toc-dates" class="nav-link" data-scroll-target="#dates"><span class="header-section-number">4.4.2</span> Dates</a></li>
+  <li><a href="#locations" id="toc-locations" class="nav-link" data-scroll-target="#locations"><span class="header-section-number">4.4.3</span> Locations</a></li>
+  <li><a href="#site-nesting" id="toc-site-nesting" class="nav-link" data-scroll-target="#site-nesting"><span class="header-section-number">4.4.4</span> Site nesting</a></li>
+  <li><a href="#taxa" id="toc-taxa" class="nav-link" data-scroll-target="#taxa"><span class="header-section-number">4.4.5</span> Taxa</a></li>
+  <li><a href="#table-column-names" id="toc-table-column-names" class="nav-link" data-scroll-target="#table-column-names"><span class="header-section-number">4.4.6</span> Table column names</a></li>
+  <li><a href="#table-linkages" id="toc-table-linkages" class="nav-link" data-scroll-target="#table-linkages"><span class="header-section-number">4.4.7</span> Table linkages</a></li>
   </ul></li>
-  <li><a href="#soil-carbon" id="toc-soil-carbon" class="nav-link" data-scroll-target="#soil-carbon"><span class="header-section-number">3.3</span> Soil Carbon</a>
+  <li><a href="#meteorology-and-hydrology-data" id="toc-meteorology-and-hydrology-data" class="nav-link" data-scroll-target="#meteorology-and-hydrology-data"><span class="header-section-number">4.5</span> Meteorology and Hydrology data</a>
   <ul class="collapse">
-  <li><a href="#introduction-2" id="toc-introduction-2" class="nav-link" data-scroll-target="#introduction-2"><span class="header-section-number">3.3.1</span> Introduction</a></li>
-  <li><a href="#recommendations-for-datasets-2" id="toc-recommendations-for-datasets-2" class="nav-link" data-scroll-target="#recommendations-for-datasets-2"><span class="header-section-number">3.3.2</span> Recommendations for datasets</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">4.5.1</span> Introduction</a></li>
+  <li><a href="#recommendations-for-datasets-1" id="toc-recommendations-for-datasets-1" class="nav-link" data-scroll-target="#recommendations-for-datasets-1"><span class="header-section-number">4.5.2</span> Recommendations for datasets</a></li>
+  </ul></li>
+  <li><a href="#soil-carbon" id="toc-soil-carbon" class="nav-link" data-scroll-target="#soil-carbon"><span class="header-section-number">4.6</span> Soil Carbon</a>
+  <ul class="collapse">
+  <li><a href="#introduction-1" id="toc-introduction-1" class="nav-link" data-scroll-target="#introduction-1"><span class="header-section-number">4.6.1</span> Introduction</a></li>
+  <li><a href="#recommendations-for-datasets-2" id="toc-recommendations-for-datasets-2" class="nav-link" data-scroll-target="#recommendations-for-datasets-2"><span class="header-section-number">4.6.2</span> Recommendations for datasets</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/scientific-domain.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/guide-domain-specific/scientific-domain.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide-domain-specific/preface.html">Scientific domain specific metadata guide</a></li><li class="breadcrumb-item"><a href="../guide-domain-specific/scientific-domain.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Scientific Domain</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
 </div>
 
 
@@ -200,52 +249,45 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This document contains current recommendations for data packages from specific scientific domains. Not all domains are covered. See navigation menu.</p>
-<section id="ecological-community-surveys" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="ecological-community-surveys"><span class="header-section-number">3.1</span> Ecological community surveys</h2>
-<p>DRAFT DRAFT DRAFT</p>
-<section id="introduction" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">3.1.1</span> Introduction</h3>
 <p>We know from experience that primary research data sets cannot be easily reused until all data are completely understood. Community survey data in particular, can be highly complex, often with location-specific methods. Some general principles can be summarized from:</p>
 <ul>
 <li>synthesis scientists working with this type of data</li>
 <li>lessons learned from harmonization of primary data, e.g., EDI’s <code>ecocomDP</code> project.</li>
 </ul>
-</section>
-<section id="authors" class="level3" data-number="3.1.2">
-<h3 data-number="3.1.2" class="anchored" data-anchor-id="authors"><span class="header-section-number">3.1.2</span> Authors</h3>
+<section id="authors" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="authors"><span class="header-section-number">4.1</span> Authors</h2>
 <ul>
 <li>Margaret O’Brien (https://orcid.org/0000-0002-1693-8322)</li>
 <li>ecocomDP working group: https://edirepository.org/resources/thematic-standardization</li>
 </ul>
 </section>
-<section id="anticipated-use-cases" class="level3" data-number="3.1.3">
-<h3 data-number="3.1.3" class="anchored" data-anchor-id="anticipated-use-cases"><span class="header-section-number">3.1.3</span> Anticipated use cases</h3>
-<section id="synthesis" class="level4" data-number="3.1.3.1">
-<h4 data-number="3.1.3.1" class="anchored" data-anchor-id="synthesis"><span class="header-section-number">3.1.3.1</span> Synthesis</h4>
+<section id="anticipated-use-cases" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="anticipated-use-cases"><span class="header-section-number">4.2</span> Anticipated use cases</h2>
+<section id="synthesis" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="synthesis"><span class="header-section-number">4.2.1</span> Synthesis</h3>
 <p>Synthesis requires that primary research data sets be understood and combined into a similar format. EDI has examined the needs of synthesis scientists using community survey data, and that feedback is incorporated here.</p>
 </section>
-<section id="harmonization" class="level4" data-number="3.1.3.2">
-<h4 data-number="3.1.3.2" class="anchored" data-anchor-id="harmonization"><span class="header-section-number">3.1.3.2</span> Harmonization</h4>
+<section id="harmonization" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="harmonization"><span class="header-section-number">4.2.2</span> Harmonization</h3>
 <p>Although a prescribed format would make data easily reused, the complexity of community surveys generally means that a prescribed format cannot be imposed on research studies. Therefore, EDI is harmonizing this data type in a workflow framework, and the lessons learned from examining raw data are included here. For more information on EDI’s harmonization of community survey data, see: - https://github.com/EDIorg/ecocomDP - https://edirepository.org/resources/thematic-standardization#ecocomdp</p>
 </section>
-<section id="external-applications" class="level4" data-number="3.1.3.3">
-<h4 data-number="3.1.3.3" class="anchored" data-anchor-id="external-applications"><span class="header-section-number">3.1.3.3</span> External applications</h4>
+<section id="external-applications" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="external-applications"><span class="header-section-number">4.2.3</span> External applications</h3>
 <p>Community survey data are of great interest to the broader biodiversity community, particularly through their support for portals such as GBIF, and the use of the Darwin Core Vocabulary. Harmonization is the first step in this process.</p>
 </section>
 </section>
-<section id="definitions-and-conventions" class="level3" data-number="3.1.4">
-<h3 data-number="3.1.4" class="anchored" data-anchor-id="definitions-and-conventions"><span class="header-section-number">3.1.4</span> Definitions and conventions</h3>
+<section id="definitions-and-conventions" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="definitions-and-conventions"><span class="header-section-number">4.3</span> Definitions and conventions</h2>
 <p>The recommendations and examples below are organized according to how easily the data are reused. In all cases <strong>Best</strong> is preferred, and recommended. <strong>Marginal</strong> and <strong>not useable</strong> may overlap in some situations. - <strong>Best</strong>: Data are easily understood (do not require manual handling or further investigation) - <strong>OK</strong>: Some manual, custom or specialized handling required - <strong>Marginal</strong>: Additional metadata is required, along with custom handling and probably investigation (e.g., questions answered via email) - <strong>Not useable</strong>: the dataset has significant metadata missing; or has too many inconsistencies or layout challenges for it to be used even with manual handling.</p>
 </section>
-<section id="recommendations-for-datasets" class="level3" data-number="3.1.5">
-<h3 data-number="3.1.5" class="anchored" data-anchor-id="recommendations-for-datasets"><span class="header-section-number">3.1.5</span> Recommendations for datasets</h3>
-<section id="sampling-methods" class="level4" data-number="3.1.5.1">
-<h4 data-number="3.1.5.1" class="anchored" data-anchor-id="sampling-methods"><span class="header-section-number">3.1.5.1</span> Sampling methods</h4>
+<section id="recommendations-for-datasets" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="recommendations-for-datasets"><span class="header-section-number">4.4</span> Recommendations for datasets</h2>
+<section id="sampling-methods" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="sampling-methods"><span class="header-section-number">4.4.1</span> Sampling methods</h3>
 <p>Methods are generally text metadata * <strong>Best</strong> * explanation of the sampling strategy. * diagrams of sampling plots and their spatial relationships * <strong>OK</strong> * reference included to a paper describing the above * <strong>Marginal/not usable</strong> * no description of methods</p>
 </section>
-<section id="dates" class="level4" data-number="3.1.5.2">
-<h4 data-number="3.1.5.2" class="anchored" data-anchor-id="dates"><span class="header-section-number">3.1.5.2</span> Dates</h4>
+<section id="dates" class="level3" data-number="4.4.2">
+<h3 data-number="4.4.2" class="anchored" data-anchor-id="dates"><span class="header-section-number">4.4.2</span> Dates</h3>
 <p>Temporal sampling regime is consistent</p>
 <ul>
 <li><strong>Best</strong>: A column for dateTime is in the entity, and its format is consistent throughout
@@ -265,8 +307,8 @@ ul.task-list li input[type="checkbox"] {
 <li></li>
 </ul>
 </section>
-<section id="locations" class="level4" data-number="3.1.5.3">
-<h4 data-number="3.1.5.3" class="anchored" data-anchor-id="locations"><span class="header-section-number">3.1.5.3</span> Locations</h4>
+<section id="locations" class="level3" data-number="4.4.3">
+<h3 data-number="4.4.3" class="anchored" data-anchor-id="locations"><span class="header-section-number">4.4.3</span> Locations</h3>
 <p>Should be complete, with latitude and longitude</p>
 <ul>
 <li><strong>Best</strong>: Columns for digital lat/lon
@@ -285,8 +327,8 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Not useable</strong>: sites codes without lat/lon</li>
 </ul>
 </section>
-<section id="site-nesting" class="level4" data-number="3.1.5.4">
-<h4 data-number="3.1.5.4" class="anchored" data-anchor-id="site-nesting"><span class="header-section-number">3.1.5.4</span> Site nesting</h4>
+<section id="site-nesting" class="level3" data-number="4.4.4">
+<h3 data-number="4.4.4" class="anchored" data-anchor-id="site-nesting"><span class="header-section-number">4.4.4</span> Site nesting</h3>
 <p>Sampling site nesting can be understood</p>
 <ul>
 <li><strong>Best</strong>: subsites are labeled
@@ -298,8 +340,8 @@ ul.task-list li input[type="checkbox"] {
 <li></li>
 </ul>
 </section>
-<section id="taxa" class="level4" data-number="3.1.5.5">
-<h4 data-number="3.1.5.5" class="anchored" data-anchor-id="taxa"><span class="header-section-number">3.1.5.5</span> Taxa</h4>
+<section id="taxa" class="level3" data-number="4.4.5">
+<h3 data-number="4.4.5" class="anchored" data-anchor-id="taxa"><span class="header-section-number">4.4.5</span> Taxa</h3>
 <p>Taxa can be resolved</p>
 <ul>
 <li><strong>Best</strong>: Taxon codes in the entity itself, assigned at source by those familiar with these taxonomic groups
@@ -316,8 +358,8 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="table-column-names" class="level4" data-number="3.1.5.6">
-<h4 data-number="3.1.5.6" class="anchored" data-anchor-id="table-column-names"><span class="header-section-number">3.1.5.6</span> Table column names</h4>
+<section id="table-column-names" class="level3" data-number="4.4.6">
+<h3 data-number="4.4.6" class="anchored" data-anchor-id="table-column-names"><span class="header-section-number">4.4.6</span> Table column names</h3>
 <p>Metadata can be matched to entity column</p>
 <ul>
 <li><strong>Best</strong>: attributeName exactly matches column header
@@ -336,8 +378,8 @@ ul.task-list li input[type="checkbox"] {
 <p>This feature has come up in other discussions. The EML metadata asserts what the content of a column is, however there is no explicit “key” into that column except for the column header in the data entity itself. If these do not match (or there is no table header), then there is nothing to go on but trust. That’s fine if data are shared only within a tightly knit community, but is less reliable when data are reused outside the orginating group.</p>
 <p><em>the ECC currently checks that number of columns and their typing match (within the limits of an RDB). For attributeNames, It shows you the first line of the table for manual comparison (an info check).</em></p>
 </section>
-<section id="table-linkages" class="level4" data-number="3.1.5.7">
-<h4 data-number="3.1.5.7" class="anchored" data-anchor-id="table-linkages"><span class="header-section-number">3.1.5.7</span> Table linkages</h4>
+<section id="table-linkages" class="level3" data-number="4.4.7">
+<h3 data-number="4.4.7" class="anchored" data-anchor-id="table-linkages"><span class="header-section-number">4.4.7</span> Table linkages</h3>
 <p>Foreign Key linkages are clear</p>
 <ul>
 <li><strong>Best</strong>: EML constraint included, with referential integrity
@@ -356,34 +398,33 @@ ul.task-list li input[type="checkbox"] {
 <p>Table linkages are most important for harmonization; synthesis efforts may be able to circumvent issues (and elevate a “not useable” dataset to “marginal”) by dropping records without referents in key fields.</p>
 </section>
 </section>
-</section>
-<section id="meteorology-and-hydrology-data" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="meteorology-and-hydrology-data"><span class="header-section-number">3.2</span> Meteorology and Hydrology data</h2>
-<section id="introduction-1" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="introduction-1"><span class="header-section-number">3.2.1</span> Introduction</h3>
+<section id="meteorology-and-hydrology-data" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="meteorology-and-hydrology-data"><span class="header-section-number">4.5</span> Meteorology and Hydrology data</h2>
+<section id="introduction" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">4.5.1</span> Introduction</h3>
 <p>This is a summary page. it should have links out for details.</p>
-<section id="synthesis-use" class="level4" data-number="3.2.1.1">
-<h4 data-number="3.2.1.1" class="anchored" data-anchor-id="synthesis-use"><span class="header-section-number">3.2.1.1</span> Synthesis use</h4>
+<section id="synthesis-use" class="level4" data-number="4.5.1.1">
+<h4 data-number="4.5.1.1" class="anchored" data-anchor-id="synthesis-use"><span class="header-section-number">4.5.1.1</span> Synthesis use</h4>
 <p>para here about CUAHSI, with link to that project.</p>
 </section>
 </section>
-<section id="recommendations-for-datasets-1" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="recommendations-for-datasets-1"><span class="header-section-number">3.2.2</span> Recommendations for datasets</h3>
+<section id="recommendations-for-datasets-1" class="level3" data-number="4.5.2">
+<h3 data-number="4.5.2" class="anchored" data-anchor-id="recommendations-for-datasets-1"><span class="header-section-number">4.5.2</span> Recommendations for datasets</h3>
 <p>summary here.</p>
 </section>
 </section>
-<section id="soil-carbon" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="soil-carbon"><span class="header-section-number">3.3</span> Soil Carbon</h2>
-<section id="introduction-2" class="level3" data-number="3.3.1">
-<h3 data-number="3.3.1" class="anchored" data-anchor-id="introduction-2"><span class="header-section-number">3.3.1</span> Introduction</h3>
+<section id="soil-carbon" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="soil-carbon"><span class="header-section-number">4.6</span> Soil Carbon</h2>
+<section id="introduction-1" class="level3" data-number="4.6.1">
+<h3 data-number="4.6.1" class="anchored" data-anchor-id="introduction-1"><span class="header-section-number">4.6.1</span> Introduction</h3>
 <p>Page desribing BPs for data packages about soil carbon. it will probably have links out for details.</p>
-<section id="synthesis-use-1" class="level4" data-number="3.3.1.1">
-<h4 data-number="3.3.1.1" class="anchored" data-anchor-id="synthesis-use-1"><span class="header-section-number">3.3.1.1</span> Synthesis use</h4>
+<section id="synthesis-use-1" class="level4" data-number="4.6.1.1">
+<h4 data-number="4.6.1.1" class="anchored" data-anchor-id="synthesis-use-1"><span class="header-section-number">4.6.1.1</span> Synthesis use</h4>
 <p>para here about current synthesis use, eg, Weider WG.</p>
 </section>
 </section>
-<section id="recommendations-for-datasets-2" class="level3" data-number="3.3.2">
-<h3 data-number="3.3.2" class="anchored" data-anchor-id="recommendations-for-datasets-2"><span class="header-section-number">3.3.2</span> Recommendations for datasets</h3>
+<section id="recommendations-for-datasets-2" class="level3" data-number="4.6.2">
+<h3 data-number="4.6.2" class="anchored" data-anchor-id="recommendations-for-datasets-2"><span class="header-section-number">4.6.2</span> Recommendations for datasets</h3>
 <p>summary here.</p>
 
 
@@ -813,12 +854,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./dataset-design-special-cases.html" class="pagination-link" aria-label="Data Package Design for Special Cases">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data Package Design for Special Cases</span></span>
+      <a href="../guide-domain-specific/preface.html" class="pagination-link" aria-label="Scientific domain specific metadata guide">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Scientific domain specific metadata guide</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="References">
+      <a href="../references.html" class="pagination-link" aria-label="References">
         <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -828,4 +869,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/scientific-domain.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/guide-domain-specific/scientific-domain.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

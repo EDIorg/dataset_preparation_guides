@@ -2,26 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ediorg.github.io/dataset_preparation_guides/index.html</loc>
-    <lastmod>2024-09-30T05:28:17.037Z</lastmod>
+    <lastmod>2024-10-04T17:21:22.756Z</lastmod>
   </url>
   <url>
     <loc>https://ediorg.github.io/dataset_preparation_guides/about.html</loc>
-    <lastmod>2024-09-30T05:28:17.035Z</lastmod>
+    <lastmod>2024-10-04T17:21:22.754Z</lastmod>
   </url>
   <url>
-    <loc>https://ediorg.github.io/dataset_preparation_guides/eml-best-practices.html</loc>
-    <lastmod>2024-09-30T05:28:17.037Z</lastmod>
+    <loc>https://ediorg.github.io/dataset_preparation_guides/guide-eml-bp/introduction.html</loc>
+    <lastmod>2024-10-04T17:21:22.755Z</lastmod>
   </url>
   <url>
-    <loc>https://ediorg.github.io/dataset_preparation_guides/dataset-design-special-cases.html</loc>
-    <lastmod>2024-09-30T05:28:17.036Z</lastmod>
+    <loc>https://ediorg.github.io/dataset_preparation_guides/guide-eml-bp/content-recommendations.html</loc>
+    <lastmod>2024-10-04T17:21:22.755Z</lastmod>
   </url>
   <url>
-    <loc>https://ediorg.github.io/dataset_preparation_guides/scientific-domain.html</loc>
-    <lastmod>2024-09-30T05:28:17.038Z</lastmod>
+    <loc>https://ediorg.github.io/dataset_preparation_guides/guide-special-cases/dataset-design-special-cases.html</loc>
+    <lastmod>2024-10-04T17:21:22.756Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ediorg.github.io/dataset_preparation_guides/guide-domain-specific/scientific-domain.html</loc>
+    <lastmod>2024-10-04T17:21:22.754Z</lastmod>
   </url>
   <url>
     <loc>https://ediorg.github.io/dataset_preparation_guides/references.html</loc>
-    <lastmod>2024-09-30T05:28:17.037Z</lastmod>
+    <lastmod>2024-10-04T17:21:22.756Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ediorg.github.io/dataset_preparation_guides/guide-eml-bp/preface.html</loc>
+    <lastmod>2024-10-04T17:21:22.755Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ediorg.github.io/dataset_preparation_guides/guide-special-cases/preface.html</loc>
+    <lastmod>2024-10-04T17:21:22.756Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ediorg.github.io/dataset_preparation_guides/guide-domain-specific/preface.html</loc>
+    <lastmod>2024-10-04T17:21:22.754Z</lastmod>
   </url>
 </urlset>

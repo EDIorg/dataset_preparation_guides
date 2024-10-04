@@ -8,7 +8,7 @@
 
 <meta name="description" content="Best practice recommendations for data packages, described by Ecological Metadata Language (EML). 2022-05-25 version">
 
-<title>References – Data Package Best Practices</title>
+<title>1&nbsp; Introduction – Data Package Best Practices</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,46 +21,28 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./guide-domain-specific/scientific-domain.html" rel="prev">
-<link href="./edi-logo.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../guide-eml-bp/content-recommendations.html" rel="next">
+<link href="../guide-eml-bp/preface.html" rel="prev">
+<link href="../edi-logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -101,7 +83,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide-eml-bp/preface.html">Best Practices for Dataset Metadata in Ecological Metadata Language (EML)</a></li><li class="breadcrumb-item"><a href="../guide-eml-bp/introduction.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -116,7 +98,7 @@ div.csl-indent {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Data Package Best Practices</a> 
+      <a href="../">Data Package Best Practices</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/ediorg/dataset_preparation_guides" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
 </div>
@@ -131,19 +113,19 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./about.html" class="sidebar-item-text sidebar-link">
+  <a href="../about.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About This Site</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./guide-eml-bp/preface.html" class="sidebar-item-text sidebar-link">
+            <a href="../guide-eml-bp/preface.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Best Practices for Dataset Metadata in Ecological Metadata Language (EML)</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -152,13 +134,13 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./guide-eml-bp/introduction.html" class="sidebar-item-text sidebar-link">
+  <a href="../guide-eml-bp/introduction.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./guide-eml-bp/content-recommendations.html" class="sidebar-item-text sidebar-link">
+  <a href="../guide-eml-bp/content-recommendations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Content recommendations for Elements and Attributes</span></span></a>
   </div>
 </li>
@@ -166,7 +148,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./guide-special-cases/preface.html" class="sidebar-item-text sidebar-link">
+            <a href="../guide-special-cases/preface.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data Package Design for Special Cases</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -175,7 +157,7 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./guide-special-cases/dataset-design-special-cases.html" class="sidebar-item-text sidebar-link">
+  <a href="../guide-special-cases/dataset-design-special-cases.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
@@ -183,7 +165,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./guide-domain-specific/preface.html" class="sidebar-item-text sidebar-link">
+            <a href="../guide-domain-specific/preface.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Scientific domain specific metadata guide</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -192,7 +174,7 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./guide-domain-specific/scientific-domain.html" class="sidebar-item-text sidebar-link">
+  <a href="../guide-domain-specific/scientific-domain.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
@@ -200,7 +182,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -209,15 +191,27 @@ div.csl-indent {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#history" id="toc-history" class="nav-link active" data-scroll-target="#history"><span class="header-section-number">1.1</span> History</a></li>
+  <li><a href="#general-recommendations" id="toc-general-recommendations" class="nav-link" data-scroll-target="#general-recommendations"><span class="header-section-number">1.2</span> General Recommendations</a>
+  <ul class="collapse">
+  <li><a href="#metadata-distribution" id="toc-metadata-distribution" class="nav-link" data-scroll-target="#metadata-distribution"><span class="header-section-number">1.2.1</span> Metadata Distribution</a></li>
+  <li><a href="#data-package-identifiers" id="toc-data-package-identifiers" class="nav-link" data-scroll-target="#data-package-identifiers"><span class="header-section-number">1.2.2</span> Data Package Identifiers</a></li>
+  <li><a href="#high-priority-elements" id="toc-high-priority-elements" class="nav-link" data-scroll-target="#high-priority-elements"><span class="header-section-number">1.2.3</span> High-priority Elements</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/guide-eml-bp/introduction.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide-eml-bp/preface.html">Best Practices for Dataset Metadata in Ecological Metadata Language (EML)</a></li><li class="breadcrumb-item"><a href="../guide-eml-bp/introduction.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">References</h1>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
 </div>
 
 
@@ -234,10 +228,79 @@ div.csl-indent {
 </header>
 
 
+<p>This document contains current ‘Best Practice’ recommendations for EML content for metadata related to ecological and environmental data. It is intended to augment the EML schema documentation <span class="citation" data-cites="EML_2019">(<a href="../references.html#ref-EML_2019" role="doc-biblioref"><strong>EML_2019?</strong></a>)</span> for a less-technical audience. The current version (v3, 2017) is one component of several resources available to EML preparers. These recommendations are directed towards the following goals:</p>
+<ul>
+<li>Provide guidance and clarification in the implementation of EML for datasets</li>
+<li>Minimize heterogeneity of EML documents to simplify development and re-use of software built to ingest it</li>
+<li>Maximize interoperability of EML documents to facilitate data synthesis</li>
+</ul>
+<p>At time of this document’s publication (late 2017), the version of EML currently in production was EML.2.1.1. EML 2.2.0 is anticipated within the next year. Contact EDI for more information.</p>
+<section id="history" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="history"><span class="header-section-number">1.1</span> History</h2>
+<p>EML Best Practice recommendations have evolved over time. The most active contributors have been members of the LTER Information Managers Committee in multiple working groups and workshops. EML has been widely used for several years with multiple applications written against it, and the community has had the opportunity to observe the consequences of many content patterns. As much as possible, recommendations have been aligned with those experiences, as well as with the capability of data contributors.</p>
+<p>Timeline and Previous Revisions</p>
+<ul>
+<li>2017 Best Practices for Dataset Metadata in EML v3 (this document)</li>
+<li>2016 EDI inception, see http://edirepository.org</li>
+<li>2011 EML Best Practices for LTER sites v2</li>
+<li>2008 EML 2.1 release</li>
+<li>2004 EML Best Practices for LTER sites</li>
+<li>2003 LTER adopts EML as network exchange standard</li>
+</ul>
+<p>Contributors, including LTER EML Best Practices Working Groups and workshops in 2003, 2004, 2010 (alphabetical order):</p>
+<ul>
+<li>Dan Bahauddin</li>
+<li>Barbara Benson</li>
+<li>Emery Boose</li>
+<li>James Brunt</li>
+<li>Duane Costa</li>
+<li>Corinna Gries</li>
+<li>Don Henshaw</li>
+<li>Margaret O’Brien</li>
+<li>Ken Ramsey</li>
+<li>Inigo San Gil</li>
+<li>Mark Servilla</li>
+<li>Wade Sheldon</li>
+<li>Philip Tarrant</li>
+<li>Theresa Valentine</li>
+<li>John Vande Castle,</li>
+<li>Kristin Vanderbilt</li>
+<li>Jonathan Walsh</li>
+<li>Yang Xia</li>
+</ul>
+</section>
+<section id="general-recommendations" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="general-recommendations"><span class="header-section-number">1.2</span> General Recommendations</h2>
+<p>Following are general best practices for handling EML dataset metadata:</p>
+<section id="metadata-distribution" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="metadata-distribution"><span class="header-section-number">1.2.1</span> Metadata Distribution</h3>
+<p>Do not publicly distribute EML documents containing elements with incorrect information, e.g., as a workaround for missing metadata or to meet validation requirements. Pre-publication drafts, or EML produced for demonstration or testing purposes should be clearly identified as such and not contributed to public archives, because these are passed on to large-scale clearinghouses. For previews of drafts or handling test and demonstration data packages, consult your repository to learn about options.</p>
+</section>
+<section id="data-package-identifiers" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="data-package-identifiers"><span class="header-section-number">1.2.2</span> Data Package Identifiers</h3>
+<p>Metadata and data set versioning are controlled by the contributor, and so identifiers are tied to local systems. Many repository systems that accept EML-described data support principles of immutable metadata and data entity versioning. EML has elements to contain package identifiers, although these may also be assigned externally. It is the responsibility of the submitters to understand the practices of their intended repository when using identifiers.</p>
+</section>
+<section id="high-priority-elements" class="level3" data-number="1.2.3">
+<h3 data-number="1.2.3" class="anchored" data-anchor-id="high-priority-elements"><span class="header-section-number">1.2.3</span> High-priority Elements</h3>
+<ul>
+<li>To support locating data by time, geographic location, and taxonomically, metadata should provide as much information as possible for the data package, in the three &lt;<strong>coverage</strong>&gt;; elements:
+<ul>
+<li>&lt;<strong>temporalCoverage</strong>&gt;; (when),</li>
+<li>&lt;<strong>geographicCoverage</strong>&gt;; (where) and</li>
+<li>&lt;<strong>taxonomicCoverage</strong>&gt; (what).</li>
+</ul></li>
+<li>For a potential user to evaluate the relevance and usability of the data package for their research study or synthesis projects, metadata should include detailed descriptions in the
+<ul>
+<li>&lt;<strong>project</strong>&gt;,</li>
+<li>&lt;<strong>methods</strong>&gt;,</li>
+<li>&lt;<strong>protocols</strong>&gt;, and</li>
+<li>&lt;<strong>intellectualRights</strong>&gt; elements.</li>
+</ul></li>
+</ul>
 
 
-
-
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -662,11 +725,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./guide-domain-specific/scientific-domain.html" class="pagination-link" aria-label="Introduction">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction</span></span>
+      <a href="../guide-eml-bp/preface.html" class="pagination-link" aria-label="Best Practices for Dataset Metadata in Ecological Metadata Language (EML)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Best Practices for Dataset Metadata in Ecological Metadata Language (EML)</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../guide-eml-bp/content-recommendations.html" class="pagination-link" aria-label="Content recommendations for Elements and Attributes">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Content recommendations for Elements and Attributes</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -674,4 +740,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/references.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/guide-eml-bp/introduction.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
