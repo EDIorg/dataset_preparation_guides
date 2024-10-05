@@ -23,7 +23,13 @@ book:
 
     - part: guide-special-cases/preface.qmd
       chapters: 
-        - guide-special-cases/dataset-design-special-cases.qmd
+        - guide-special-cases/code.qmd
+        - guide-special-cases/model-based.qmd
+        - guide-special-cases/images-and-docs.qmd
+        - guide-special-cases/spatial-data.qmd
+        - guide-special-cases/moving-platforms.qmd
+        - guide-special-cases/other-repositories.qmd
+        - guide-special-cases/large-offline.qmd
 
     - part: guide-domain-specific/preface.qmd
       chapters:

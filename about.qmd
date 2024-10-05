@@ -2,7 +2,7 @@
 
 ::: {.callout-warning}
 
-This documentation for the site is out of date. We are transitioning to a Quarto site.
+The documentation on this particular page is out of date. We are transitioning to a Quarto site and will revise soon.
 
 :::
 
