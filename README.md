@@ -8,6 +8,6 @@ and reformatted as a collection of [Quarto books](https://quarto.org/docs/books)
 
 ## Published versions
 
-* [The current production version of the books](https://ediorg.github.io/dataset_preparation_guides/)
-* The pre-release version of the books (to come, probably on netlify)
+* [The current production version of the documents](https://ediorg.github.io/dataset_preparation_guides/)
+* [The pre-release version of the documents](https://prerelease-edi-docs.netlify.app)
 
