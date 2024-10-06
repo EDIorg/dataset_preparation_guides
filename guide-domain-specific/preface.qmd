@@ -1,5 +1,5 @@
 # Scientific domain specific metadata guide {.unnumbered}
 
-This document contains current recommendations for data packages from specific scientific domains. Not all scientific domains are covered.
+_Very much a work in progress._ 
 
-See navigation menu.
+Recommendations for community-developed data products from specific scientific domains. Not all scientific domains are covered. The data packages are derived from raw data and reformatted to meet certain data harmonization standards. Many of these data products have extensive related code bases, which recommendations can take into account and link to. 
