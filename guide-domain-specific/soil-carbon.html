@@ -8,7 +8,7 @@
 
 <meta name="description" content="Best practice recommendations for data packages, described by Ecological Metadata Language (EML). 2022-05-25 version">
 
-<title>Best Practices for Dataset Metadata in Ecological Metadata Language (EML) – Data Package Best Practices</title>
+<title>12&nbsp; Soil Carbon – Data Package Best Practices</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -65,8 +31,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../guide-eml-bp/introduction.html" rel="next">
-<link href="../about.html" rel="prev">
+<link href="../references.html" rel="next">
+<link href="../guide-domain-specific/hymet.html" rel="prev">
 <link href="../edi-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -117,7 +83,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide-eml-bp/preface.html">Best Practices for Dataset Metadata in Ecological Metadata Language (EML)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide-domain-specific/preface.html">Scientific domain specific metadata guide</a></li><li class="breadcrumb-item"><a href="../guide-domain-specific/soil-carbon.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Soil Carbon</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -159,7 +125,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../guide-eml-bp/preface.html" class="sidebar-item-text sidebar-link active">
+            <a href="../guide-eml-bp/preface.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Best Practices for Dataset Metadata in Ecological Metadata Language (EML)</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -256,7 +222,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../guide-domain-specific/soil-carbon.html" class="sidebar-item-text sidebar-link">
+  <a href="../guide-domain-specific/soil-carbon.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Soil Carbon</span></span></a>
   </div>
 </li>
@@ -278,22 +244,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#conventions-and-definitions" id="toc-conventions-and-definitions" class="nav-link active" data-scroll-target="#conventions-and-definitions">Conventions and Definitions</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">12.1</span> Introduction</a>
   <ul class="collapse">
-  <li><a href="#audience" id="toc-audience" class="nav-link" data-scroll-target="#audience">Audience</a></li>
-  <li><a href="#fonts-and-typeface" id="toc-fonts-and-typeface" class="nav-link" data-scroll-target="#fonts-and-typeface">Fonts and typeface</a></li>
-  <li><a href="#definitions" id="toc-definitions" class="nav-link" data-scroll-target="#definitions">Definitions</a></li>
-  <li><a href="#other-eml-resources" id="toc-other-eml-resources" class="nav-link" data-scroll-target="#other-eml-resources">Other EML Resources</a></li>
+  <li><a href="#synthesis-use" id="toc-synthesis-use" class="nav-link" data-scroll-target="#synthesis-use"><span class="header-section-number">12.1.1</span> Synthesis use</a></li>
   </ul></li>
+  <li><a href="#recommendations-for-datasets" id="toc-recommendations-for-datasets" class="nav-link" data-scroll-target="#recommendations-for-datasets"><span class="header-section-number">12.2</span> Recommendations for datasets</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/guide-eml-bp/preface.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/guide-domain-specific/soil-carbon.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide-domain-specific/preface.html">Scientific domain specific metadata guide</a></li><li class="breadcrumb-item"><a href="../guide-domain-specific/soil-carbon.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Soil Carbon</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Best Practices for Dataset Metadata in Ecological Metadata Language (EML)</h1>
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Soil Carbon</span></h1>
 </div>
 
 
@@ -310,47 +274,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div style="text-align:center;">
-<p>Version 3</p>
-<p>November 2017</p>
-<p>This document is managed and distributed by the Environmental Data Initiative (EDI)</p>
-<p>https://edirepository.org</p>
-<p>info@edirepository.org</p>
-</div>
-<p>Please cite as:</p>
-<p>Best Practices for Dataset Metadata in Ecological Metadata Language (EML Best Practices V3). 2017. Environmental Data Initiative.</p>
-<section id="conventions-and-definitions" class="level1">
-<h1>Conventions and Definitions</h1>
-<section id="audience" class="level3">
-<h3 class="anchored" data-anchor-id="audience">Audience</h3>
-<p>This document is intended for data managers. It assumes that readers are familiar with</p>
-<ul>
-<li>the basic structure of an XML document, and the ability to edit in an XML editor like OxygenXML or XMLSpy.</li>
-<li>the process for contributing data to a repository. If you reached this document from a repository’s help-page, contact them for more information.</li>
-</ul>
+<section id="introduction" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">12.1</span> Introduction</h2>
+<p>Page desribing BPs for data packages about soil carbon. it will probably have links out for details.</p>
+<section id="synthesis-use" class="level3" data-number="12.1.1">
+<h3 data-number="12.1.1" class="anchored" data-anchor-id="synthesis-use"><span class="header-section-number">12.1.1</span> Synthesis use</h3>
+<p>para here about current synthesis use, eg, Weider WG.</p>
 </section>
-<section id="fonts-and-typeface" class="level3">
-<h3 class="anchored" data-anchor-id="fonts-and-typeface">Fonts and typeface</h3>
-<p>Numbered examples of EML nodes are in fixed-width font:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span><span class="ot"> version=</span><span class="st">"1.0"</span><span class="ot"> encoding=</span><span class="st">"UTF-8"</span><span class="fu">?&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>XML element and attribute names, XPath and references to element names in text are in bold face. Single element names are surrounded by angle brackets, as they appear in XML.</p>
-<p>&lt;<strong>dataTable</strong>&gt;<br>
-<strong>/eml:eml/@packageId</strong></p>
-<p>Some recommendations have special context, e.g., an XML element or attribute may be requested by a community (e.g., LTER), or required by the EDI repository (but not by other repositories).</p>
-<p><em>Context notes: Recommendations for EML usage in a specific context are called “context notes”, and are placed in separate paragraphs, in italic.</em></p>
 </section>
-<section id="definitions" class="level3">
-<h3 class="anchored" data-anchor-id="definitions">Definitions</h3>
-<p><strong>EML preparer</strong>: the person responsible for “building” the EML metadata record. Generally, this is a data manager working with a project or physical site that produces data.</p>
-<p><strong>Contributor</strong>: the research project contributing the data package, e.g., an LTER or OBFS site, or a Macrosystems project. Generally, the “EML preparer” works with or for the “Contributor.”</p>
-<p><strong>Data package</strong>: the EML metadata together with its entity or entities. This is generally the unit housed in repositories. We use this term to avoid confusion with the EML element “<strong>dataset</strong>”.</p>
-</section>
-<section id="other-eml-resources" class="level3">
-<h3 class="anchored" data-anchor-id="other-eml-resources">Other EML Resources</h3>
-<p>Some sections refer to further information or tools. These can be found on the EDI website, under “Resources”, at <a href="https://edirepository.org">https://edirepository.org</a></p>
+<section id="recommendations-for-datasets" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="recommendations-for-datasets"><span class="header-section-number">12.2</span> Recommendations for datasets</h2>
+<p>summary here.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -776,13 +712,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../about.html" class="pagination-link" aria-label="About This Site">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">About This Site</span>
+      <a href="../guide-domain-specific/hymet.html" class="pagination-link" aria-label="Hydrology and Meteorology Data">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Hydrology and Meteorology Data</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../guide-eml-bp/introduction.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -791,4 +727,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/guide-eml-bp/preface.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/guide-domain-specific/soil-carbon.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

@@ -8,7 +8,7 @@
 
 <meta name="description" content="Best practice recommendations for data packages, described by Ecological Metadata Language (EML). 2022-05-25 version">
 
-<title>Best Practices for Dataset Metadata in Ecological Metadata Language (EML) – Data Package Best Practices</title>
+<title>4&nbsp; Model-Based Datasets – Data Package Best Practices</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,8 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../guide-eml-bp/introduction.html" rel="next">
-<link href="../about.html" rel="prev">
+<link href="../guide-special-cases/images-and-docs.html" rel="next">
+<link href="../guide-special-cases/code.html" rel="prev">
 <link href="../edi-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -117,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide-eml-bp/preface.html">Best Practices for Dataset Metadata in Ecological Metadata Language (EML)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide-special-cases/preface.html">Data Package Design for Special Cases</a></li><li class="breadcrumb-item"><a href="../guide-special-cases/model-based.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Model-Based Datasets</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -159,7 +159,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../guide-eml-bp/preface.html" class="sidebar-item-text sidebar-link active">
+            <a href="../guide-eml-bp/preface.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Best Practices for Dataset Metadata in Ecological Metadata Language (EML)</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -197,7 +197,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../guide-special-cases/model-based.html" class="sidebar-item-text sidebar-link">
+  <a href="../guide-special-cases/model-based.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Model-Based Datasets</span></span></a>
   </div>
 </li>
@@ -278,22 +278,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#conventions-and-definitions" id="toc-conventions-and-definitions" class="nav-link active" data-scroll-target="#conventions-and-definitions">Conventions and Definitions</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">4.1</span> Introduction</a></li>
+  <li><a href="#recommendations-for-data-packages" id="toc-recommendations-for-data-packages" class="nav-link" data-scroll-target="#recommendations-for-data-packages"><span class="header-section-number">4.2</span> Recommendations for data packages</a>
   <ul class="collapse">
-  <li><a href="#audience" id="toc-audience" class="nav-link" data-scroll-target="#audience">Audience</a></li>
-  <li><a href="#fonts-and-typeface" id="toc-fonts-and-typeface" class="nav-link" data-scroll-target="#fonts-and-typeface">Fonts and typeface</a></li>
-  <li><a href="#definitions" id="toc-definitions" class="nav-link" data-scroll-target="#definitions">Definitions</a></li>
-  <li><a href="#other-eml-resources" id="toc-other-eml-resources" class="nav-link" data-scroll-target="#other-eml-resources">Other EML Resources</a></li>
+  <li><a href="#referencing-models-in-eml" id="toc-referencing-models-in-eml" class="nav-link" data-scroll-target="#referencing-models-in-eml"><span class="header-section-number">4.2.1</span> Referencing models in EML</a></li>
+  <li><a href="#model-input-and-output-data" id="toc-model-input-and-output-data" class="nav-link" data-scroll-target="#model-input-and-output-data"><span class="header-section-number">4.2.2</span> Model input and output data</a></li>
+  <li><a href="#model-parameters" id="toc-model-parameters" class="nav-link" data-scroll-target="#model-parameters"><span class="header-section-number">4.2.3</span> Model parameters</a></li>
   </ul></li>
+  <li><a href="#example-data-packages-in-edi" id="toc-example-data-packages-in-edi" class="nav-link" data-scroll-target="#example-data-packages-in-edi"><span class="header-section-number">4.3</span> Example data packages in EDI</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources"><span class="header-section-number">4.4</span> Resources</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/guide-eml-bp/preface.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/guide-special-cases/model-based.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide-special-cases/preface.html">Data Package Design for Special Cases</a></li><li class="breadcrumb-item"><a href="../guide-special-cases/model-based.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Model-Based Datasets</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Best Practices for Dataset Metadata in Ecological Metadata Language (EML)</h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Model-Based Datasets</span></h1>
 </div>
 
 
@@ -310,47 +312,142 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div style="text-align:center;">
-<p>Version 3</p>
-<p>November 2017</p>
-<p>This document is managed and distributed by the Environmental Data Initiative (EDI)</p>
-<p>https://edirepository.org</p>
-<p>info@edirepository.org</p>
+<p>Contributors: An T. Nguyen, Tim Whiteaker, Corinna Gries</p>
+<section id="introduction" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">4.1</span> Introduction</h2>
+<p>This document includes recommendations for archiving data packages composed of model-based datasets. These datasets may include the model code itself, input data, model parameter settings, and output data.</p>
+<p>The range of cases for model-based datasets includes small one-off model code specific to one research question, through various code packages which are maintained in community repositories as long as they meet requirements (e.g., CRAN for R packages), to large community models maintained by groups of programmers and users.</p>
+<p>The intention of these recommendations is to make research based on modeling more transparent rather than achieve exact reproducibility, i.e., provide sufficient documentation so that a knowledgeable person can understand algorithms, programming decisions, and their ramifications for the results, rather than run the model and obtain the same results.</p>
+<p>It is not always easy to determine who among project personnel (IMs, scientists, programmers) is responsible for the different components of a model-based dataset. This is best decided on a case-by-case basis. A common division is that the code authors annotate the code, and the IM handles the archiving and linkage to data product(s); partially except in cases of large community models.</p>
+</section>
+<section id="recommendations-for-data-packages" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="recommendations-for-data-packages"><span class="header-section-number">4.2</span> Recommendations for data packages</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/model_datasets.png" title="model data management flowchart" class="img-fluid figure-img"></p>
+<figcaption>Figure 1: Flowchart for considering archival paths for various model components.</figcaption>
+</figure>
 </div>
-<p>Please cite as:</p>
-<p>Best Practices for Dataset Metadata in Ecological Metadata Language (EML Best Practices V3). 2017. Environmental Data Initiative.</p>
-<section id="conventions-and-definitions" class="level1">
-<h1>Conventions and Definitions</h1>
-<section id="audience" class="level3">
-<h3 class="anchored" data-anchor-id="audience">Audience</h3>
-<p>This document is intended for data managers. It assumes that readers are familiar with</p>
-<ul>
-<li>the basic structure of an XML document, and the ability to edit in an XML editor like OxygenXML or XMLSpy.</li>
-<li>the process for contributing data to a repository. If you reached this document from a repository’s help-page, contact them for more information.</li>
-</ul>
+<section id="referencing-models-in-eml" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="referencing-models-in-eml"><span class="header-section-number">4.2.1</span> Referencing models in EML</h3>
+<p>For data packages related to a model, whether the model is archived within the same data package or not, indicate linkage to the model in EML following the <a href="code.html">best practices for archiving code</a> (see the section on linking code and data).</p>
+<p>Example 1: EML snippet relating data to models via the method description:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">methodStep</span>&gt;</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>   &lt;<span class="kw">description</span>&gt;</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>      &lt;<span class="kw">para</span>&gt;This methodStep contains data provenance information as specified in the LTER EML Best Practices. Each dataSource element here lists entity-specific information and links to source data used in the creation of this derivative data package.&lt;/<span class="kw">para</span>&gt;</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>   &lt;/<span class="kw">description</span>&gt;</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>   &lt;<span class="kw">dataSource</span>&gt;</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>      &lt;<span class="kw">title</span>&gt;Source dataset title&lt;/<span class="kw">title</span>&gt;</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>      &lt;<span class="kw">creator</span>&gt;</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">individualName</span>&gt;</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>            &lt;<span class="kw">givenName</span>&gt;first name&lt;/<span class="kw">givenName</span>&gt;</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>            &lt;<span class="kw">surName</span>&gt;last name&lt;/<span class="kw">surName</span>&gt;</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>         &lt;/<span class="kw">individualName</span>&gt;</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">organizationName</span>&gt;organization name&lt;/<span class="kw">organizationName</span>&gt;</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">electronicMailAddress</span>&gt;email@some.edu&lt;/<span class="kw">electronicMailAddress</span>&gt;</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>      &lt;/<span class="kw">creator</span>&gt;</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>      &lt;<span class="kw">distribution</span>&gt;</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">online</span>&gt;</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>            &lt;<span class="kw">onlineDescription</span>&gt;This is a link to an external online data resource (describe resource and repository location).&lt;/<span class="kw">onlineDescription</span>&gt;</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>            &lt;<span class="kw">url</span><span class="ot"> function=</span><span class="st">"information"</span>&gt;https://pasta.lternet.edu/package/metadata/eml/knb-lter-ntl/80/2&lt;/<span class="kw">url</span>&gt;</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>         &lt;/<span class="kw">online</span>&gt;</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>      &lt;/<span class="kw">distribution</span>&gt;</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>      &lt;<span class="kw">contact</span>&gt;</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">positionName</span>&gt;Information Manager&lt;/<span class="kw">positionName</span>&gt;</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">organizationName</span>&gt;organization name&lt;/<span class="kw">organizationName</span>&gt;</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">electronicMailAddress</span>&gt;infomgr@some.edu&lt;/<span class="kw">electronicMailAddress</span>&gt;</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>      &lt;/<span class="kw">contact</span>&gt;</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>   &lt;/<span class="kw">dataSource</span>&gt;</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">methodStep</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="model-code" class="level4" data-number="4.2.1.1">
+<h4 data-number="4.2.1.1" class="anchored" data-anchor-id="model-code"><span class="header-section-number">4.2.1.1</span> Model code</h4>
+<p>The model used to produce certain data needs to be well documented and linked from the resulting data product(s). However, it is not always easy to decide where and how to archive the code, and whether or not in conjunction with the data product(s). We outline in sections below three common code archiving options.</p>
+<p>Note that these scenarios (model code archived with data, or standalone in EDI, or elsewhere) are not mutually exclusive. Any project that involves code might make use of both established and custom software hosted on many different platforms, and might use some or all archiving options.</p>
+<p>To decide between archiving options, consider the questions listed in <a href="code.html">best practices for publishing code</a>.</p>
 </section>
-<section id="fonts-and-typeface" class="level3">
-<h3 class="anchored" data-anchor-id="fonts-and-typeface">Fonts and typeface</h3>
-<p>Numbered examples of EML nodes are in fixed-width font:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span><span class="ot"> version=</span><span class="st">"1.0"</span><span class="ot"> encoding=</span><span class="st">"UTF-8"</span><span class="fu">?&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>XML element and attribute names, XPath and references to element names in text are in bold face. Single element names are surrounded by angle brackets, as they appear in XML.</p>
-<p>&lt;<strong>dataTable</strong>&gt;<br>
-<strong>/eml:eml/@packageId</strong></p>
-<p>Some recommendations have special context, e.g., an XML element or attribute may be requested by a community (e.g., LTER), or required by the EDI repository (but not by other repositories).</p>
-<p><em>Context notes: Recommendations for EML usage in a specific context are called “context notes”, and are placed in separate paragraphs, in italic.</em></p>
+<section id="model-code-and-data-in-the-same-package" class="level4" data-number="4.2.1.2">
+<h4 data-number="4.2.1.2" class="anchored" data-anchor-id="model-code-and-data-in-the-same-package"><span class="header-section-number">4.2.1.2</span> Model code and data in the same package</h4>
+<p>The goal of this practice is to ensure transparency of the data, and it applies to one-off models developed for the associated data, or occasionally to larger code bases for the reasons outlined in <a href="code.html">best practices for archiving code</a>. Include the code as a dataset/otherEntity. Additionally, it is recommended to include a CodeMeta file, which can also be handled and documented in EML as dataset/otherEntity. CodeMeta is a metadata standard for software and code compatible with schema.org. Refer to <a href="code.html">best practices for archiving code</a> for how to document the code and create CodeMeta.</p>
 </section>
-<section id="definitions" class="level3">
-<h3 class="anchored" data-anchor-id="definitions">Definitions</h3>
-<p><strong>EML preparer</strong>: the person responsible for “building” the EML metadata record. Generally, this is a data manager working with a project or physical site that produces data.</p>
-<p><strong>Contributor</strong>: the research project contributing the data package, e.g., an LTER or OBFS site, or a Macrosystems project. Generally, the “EML preparer” works with or for the “Contributor.”</p>
-<p><strong>Data package</strong>: the EML metadata together with its entity or entities. This is generally the unit housed in repositories. We use this term to avoid confusion with the EML element “<strong>dataset</strong>”.</p>
+<section id="model-code-as-standalone-package" class="level4" data-number="4.2.1.3">
+<h4 data-number="4.2.1.3" class="anchored" data-anchor-id="model-code-as-standalone-package"><span class="header-section-number">4.2.1.3</span> Model code as standalone package</h4>
+<p>If the model has been used to generate several datasets, i.e., is more widely applicable, it can be archived as its own package in EDI and assigned a DOI. Include the code as a dataset/otherEntity. Additionally, it is recommended to include a CodeMeta JSON-LD file, which can also be handled and documented in EML as dataset/otherEntity. CodeMeta is a metadata standard for software and code compatible with schema.org. Refer to <a href="code.html">best practices for archiving code</a> for how to document the code and create CodeMeta.</p>
 </section>
-<section id="other-eml-resources" class="level3">
-<h3 class="anchored" data-anchor-id="other-eml-resources">Other EML Resources</h3>
-<p>Some sections refer to further information or tools. These can be found on the EDI website, under “Resources”, at <a href="https://edirepository.org">https://edirepository.org</a></p>
+<section id="model-code-archivedmaintained-elsewhere" class="level4" data-number="4.2.1.4">
+<h4 data-number="4.2.1.4" class="anchored" data-anchor-id="model-code-archivedmaintained-elsewhere"><span class="header-section-number">4.2.1.4</span> Model code archived/maintained elsewhere</h4>
+<p>This might include complex community models/software maintained by many people, published and actively maintained R/Python packages, etc., or simply code archived in another repository such as <a href="https://www.comses.net/">CoMSES Net</a>. It may sometimes be advisable to archive a copy of the model code with the data, even if it appears to be maintained elsewhere. See recommendations above for referencing models in EML.</p>
+</section>
+</section>
+<section id="model-input-and-output-data" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="model-input-and-output-data"><span class="header-section-number">4.2.2</span> Model input and output data</h3>
+<p>These are considered data entities, which should be handled according to EML best practices for corresponding data types. However, if the resulting datasets are very large, one may consider if input/output from all individual model runs need to be archived. Are there specific model run results that are more useful for non-modelers? For example: results from model runs leading to a journal publication.</p>
+<p>Very large model inputs/outputs may need to be archived offline. Refer to <a href="large-data-sets.html">best practices for offline data</a>.</p>
+<p>If the model requires a specific folder structure, you can zip model input files within the package to preserve that folder structure. A disadvantage of this approach is that you cannot elegantly describe each file with EML.</p>
+<p>The <a href="https://modeldatarcn.github.io/#project-description">EarthCube Research Coordination Network, “What About Model Data?” group</a> is working on a rubric to help you determine how much model output data to save, based on assorted criteria on reproducibility/value of the data. Learn more about that group and their rubric on their <a href="https://modeldatarcn.github.io/">Model Data RCN website</a>.</p>
+<p>Researchers at the Department of Energyâ€™s Environmental Systems Science are also working on assessing model archiving needs. In <a href="https://eartharxiv.org/repository/view/260/">this preprint</a>, Simmonds et al.&nbsp;2020 discuss feedback from communications with modellers and propose preliminary solutions. With regards to input/output data, their feedback indicates two opposite opinions: some feel the whole gamut of raw to aggregated outputs needs to be archived, while others advocate for only high-level outputs corresponding to publication figures. They also found that spin-up simulations were not considered a high priority for archiving. See section 2.3 What is worth archiving and for how long does it remain useful?</p>
+</section>
+<section id="model-parameters" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="model-parameters"><span class="header-section-number">4.2.3</span> Model parameters</h3>
+<p>Include model parameters whenever applicable. If code/input/output from multiple model runs are archived, make sure to archive all corresponding sets of parameters, and be explicit in linking the different components together.</p>
+<p>Consider archiving model parameter files as their own data object(s) in both their native format and as a text (non-binary) version. If the ‘runfile’ will be archived, consider including the parameters within that file with appropriate annotations.</p>
+</section>
+</section>
+<section id="example-data-packages-in-edi" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="example-data-packages-in-edi"><span class="header-section-number">4.3</span> Example data packages in EDI</h2>
+<table>
+<tbody><tr>
+<td>
+<strong>Dataset Title</strong>
+</td>
+<td>
+<strong>Description</strong>
+</td>
+<td>
+<strong>EDI Package ID</strong>
+</td>
+</tr>
+<tr>
+<td>
+<em>North Temperate Lakes LTER General Lake Model Parameter Set for Lake Mendota, Summer 2016 Calibration</em>
+</td>
+<td>
+Parameters for specific GLM runs. GLM is a large community model, not managed and archived in EDI
+</td>
+<td>
+<a href="https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-ntl.348.2">knb-lter-ntl.348.2</a>
+</td>
+</tr>
+<tr>
+<td>
+<em>SBC LTER: Regional Oceanic Modeling System (ROMS) Setup Files, Code, and Lagrangian Model Setup Files</em>
+</td>
+<td>
+All the necessary code, grid, forcing, initial, and boundary condition files for running the UCLA version of the Regional Oceanic Modeling System (ROMS) for the Santa Barbara Channel
+</td>
+<td>
+<a href="https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sbc&amp;identifier=126">knb-lter-sbc.126.1</a>
+</td>
+</tr>
+<tr>
+<td>
+<em>Lake thermal structure drives inter-annual variability in summer anoxia dynamics in a eutrophic lake over 37 years</em>
+</td>
+<td>
+Dataset to run a 37-year simulation (1979-2015) of the Lake Mendota lake ecosystem using the vertical 1D GLM-AED2 model.
+</td>
+<td>
+<a href="https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-ntl&amp;identifier=396">knb-lter-ntl.396.1</a>
+</td>
+</tr>
+</tbody></table>
+</section>
+<section id="resources" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="resources"><span class="header-section-number">4.4</span> Resources</h2>
+<p>Janssen, Marco A., Lilian Na’ia Alessa, Michael Barton, Sean Bergin and Allen Lee (2008). â€˜Towards a Community Framework for Agent-Based Modellingâ€™. Journal of Artificial Societies and Social Simulation 11(2)6 <a href="http://jasss.soc.surrey.ac.uk/11/2/6.html">http://jasss.soc.surrey.ac.uk/11/2/6.html</a>.</p>
+<p>Simmonds, Maegen, William J. Riley, Shreyas Cholia, and Charuleka Varadharajan (2020). ‘Addressing Model Data Archiving Needs for the Department of Energyâ€™s Environmental Systems Science Community’. EarthArXiv (preprint). <a href="https://doi.org/10.31223/osf.io/acdk4">https://doi.org/10.31223/osf.io/acdk4</a>.</p>
+<p>See sections 2.3 What is worth archiving and for how long does it remain useful?, discussed above, plus 2.4 Model data archiving protocol, where the authors argue for better standardized reporting format for model data, e.g., top-level metadata and directory structure at a minimum. Section 4.1 Developing Model Data Archiving Guidelines proposes an organization scheme for model data.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -776,13 +873,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../about.html" class="pagination-link" aria-label="About This Site">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">About This Site</span>
+      <a href="../guide-special-cases/code.html" class="pagination-link" aria-label="Code">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Code</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../guide-eml-bp/introduction.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../guide-special-cases/images-and-docs.html" class="pagination-link" aria-label="Images and Documents as Data">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Images and Documents as Data</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -791,4 +888,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/guide-eml-bp/preface.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/guide-special-cases/model-based.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

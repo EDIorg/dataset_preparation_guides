@@ -8,7 +8,7 @@
 
 <meta name="description" content="Best practice recommendations for data packages, described by Ecological Metadata Language (EML). 2022-05-25 version">
 
-<title>Best Practices for Dataset Metadata in Ecological Metadata Language (EML) – Data Package Best Practices</title>
+<title>9&nbsp; Large Data Sets – Data Package Best Practices</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,8 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../guide-eml-bp/introduction.html" rel="next">
-<link href="../about.html" rel="prev">
+<link href="../guide-domain-specific/preface.html" rel="next">
+<link href="../guide-special-cases/other-repositories.html" rel="prev">
 <link href="../edi-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -117,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide-eml-bp/preface.html">Best Practices for Dataset Metadata in Ecological Metadata Language (EML)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide-special-cases/preface.html">Data Package Design for Special Cases</a></li><li class="breadcrumb-item"><a href="../guide-special-cases/large-offline.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Large Data Sets</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -159,7 +159,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../guide-eml-bp/preface.html" class="sidebar-item-text sidebar-link active">
+            <a href="../guide-eml-bp/preface.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Best Practices for Dataset Metadata in Ecological Metadata Language (EML)</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -227,7 +227,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../guide-special-cases/large-offline.html" class="sidebar-item-text sidebar-link">
+  <a href="../guide-special-cases/large-offline.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Large Data Sets</span></span></a>
   </div>
 </li>
@@ -278,22 +278,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#conventions-and-definitions" id="toc-conventions-and-definitions" class="nav-link active" data-scroll-target="#conventions-and-definitions">Conventions and Definitions</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">9.1</span> Introduction</a>
   <ul class="collapse">
-  <li><a href="#audience" id="toc-audience" class="nav-link" data-scroll-target="#audience">Audience</a></li>
-  <li><a href="#fonts-and-typeface" id="toc-fonts-and-typeface" class="nav-link" data-scroll-target="#fonts-and-typeface">Fonts and typeface</a></li>
-  <li><a href="#definitions" id="toc-definitions" class="nav-link" data-scroll-target="#definitions">Definitions</a></li>
-  <li><a href="#other-eml-resources" id="toc-other-eml-resources" class="nav-link" data-scroll-target="#other-eml-resources">Other EML Resources</a></li>
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background"><span class="header-section-number">9.1.1</span> Background</a></li>
   </ul></li>
+  <li><a href="#recommendations-for-data-packages" id="toc-recommendations-for-data-packages" class="nav-link" data-scroll-target="#recommendations-for-data-packages"><span class="header-section-number">9.2</span> Recommendations for data packages</a>
+  <ul class="collapse">
+  <li><a href="#physical-storage" id="toc-physical-storage" class="nav-link" data-scroll-target="#physical-storage"><span class="header-section-number">9.2.1</span> Physical Storage</a></li>
+  <li><a href="#access" id="toc-access" class="nav-link" data-scroll-target="#access"><span class="header-section-number">9.2.2</span> Access</a></li>
+  <li><a href="#data-package" id="toc-data-package" class="nav-link" data-scroll-target="#data-package"><span class="header-section-number">9.2.3</span> Data package</a></li>
+  <li><a href="#package-metadata" id="toc-package-metadata" class="nav-link" data-scroll-target="#package-metadata"><span class="header-section-number">9.2.4</span> Package Metadata</a></li>
+  <li><a href="#eml" id="toc-eml" class="nav-link" data-scroll-target="#eml"><span class="header-section-number">9.2.5</span> EML</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">9.3</span> References</a>
+  <ul class="collapse">
+  <li><a href="#eml-documentation" id="toc-eml-documentation" class="nav-link" data-scroll-target="#eml-documentation"><span class="header-section-number">9.3.1</span> EML documentation</a></li>
+  </ul></li>
+  <li><a href="#potential-issues" id="toc-potential-issues" class="nav-link" data-scroll-target="#potential-issues"><span class="header-section-number">9.4</span> Potential Issues</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/guide-eml-bp/preface.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/guide-special-cases/large-offline.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide-special-cases/preface.html">Data Package Design for Special Cases</a></li><li class="breadcrumb-item"><a href="../guide-special-cases/large-offline.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Large Data Sets</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Best Practices for Dataset Metadata in Ecological Metadata Language (EML)</h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Large Data Sets</span></h1>
 </div>
 
 
@@ -310,47 +320,154 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div style="text-align:center;">
-<p>Version 3</p>
-<p>November 2017</p>
-<p>This document is managed and distributed by the Environmental Data Initiative (EDI)</p>
-<p>https://edirepository.org</p>
-<p>info@edirepository.org</p>
-</div>
-<p>Please cite as:</p>
-<p>Best Practices for Dataset Metadata in Ecological Metadata Language (EML Best Practices V3). 2017. Environmental Data Initiative.</p>
-<section id="conventions-and-definitions" class="level1">
-<h1>Conventions and Definitions</h1>
-<section id="audience" class="level3">
-<h3 class="anchored" data-anchor-id="audience">Audience</h3>
-<p>This document is intended for data managers. It assumes that readers are familiar with</p>
+<p>Contributors: Margaret O’Brien, Corinna Gries, Mark Servilla</p>
+<section id="introduction" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">9.1</span> Introduction</h2>
+<p>Data entities are kept offline when they are too large to be handled easily by the HTTP protocol, are expected to be rarely requested, and can be mailed on an external drive. If you suspect your data fall into this category, contact EDI for advice (support@edirepository.org). Below are recommendations for the EDI repository’s handling of data packages that have an offline component.</p>
+<section id="background" class="level3" data-number="9.1.1">
+<h3 data-number="9.1.1" class="anchored" data-anchor-id="background"><span class="header-section-number">9.1.1</span> Background</h3>
+<p>Standard practice is to handle data entities (both upload and download) via the HTTP protocol, using a URL. However, for very large datasets HTTP can fail due to physical limits. The limit for “too large” is somewhat subjective; EDI’s current limit for datasets that are “too large for HTTP” is 100GB (all data and metadata).</p>
+</section>
+</section>
+<section id="recommendations-for-data-packages" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="recommendations-for-data-packages"><span class="header-section-number">9.2</span> Recommendations for data packages</h2>
+<section id="physical-storage" class="level3" data-number="9.2.1">
+<h3 data-number="9.2.1" class="anchored" data-anchor-id="physical-storage"><span class="header-section-number">9.2.1</span> Physical Storage</h3>
 <ul>
-<li>the basic structure of an XML document, and the ability to edit in an XML editor like OxygenXML or XMLSpy.</li>
-<li>the process for contributing data to a repository. If you reached this document from a repository’s help-page, contact them for more information.</li>
+<li><p>The use of a Solid-state Drive (SSD) is strongly recommended for all offline data storage. The SSD should be formatted using one of the following file systems: 1) exFAT, 2) NTFS, or 3) ext4. Each of these file systems can accommodate individual file sizes greater than 1TB.</p></li>
+<li><p>Add data to external drive in native (non-compressed, non-tarred, non-zipped) format, deliver to EDI (e.g., by physical mail).</p></li>
+<li><p>EDI will store three copies, one external hard drive each in New Mexico and in Wisconsin, one copy in general EDI backup cloud storage.</p></li>
+<li><p>Please mail one copy each to:</p></li>
+</ul>
+<p>Attn: Mark Servilla UNM Biology, Castetter Hall 1480 MSC03-2020, 219 Yale Blvd NE Albuquerque, NM 87131-0001</p>
+<p>Attn: Corinna Gries University of Wisconsin Center for Limnology 680 North Park Street Madison WI 53706-1413</p>
+</section>
+<section id="access" class="level3" data-number="9.2.2">
+<h3 data-number="9.2.2" class="anchored" data-anchor-id="access"><span class="header-section-number">9.2.2</span> Access</h3>
+<p>To receive offline data, send a request to support@edirepository.org listing the data package(s) of interest and we’ll determine the best mode of delivery. If technically feasible, we will stage data on an internet accessible host and will send you a URL when the data are ready for download. Otherwise, data will be sent on physical media. To receive data on physical media, you will be required to send a storage device of adequate volume to:</p>
+<p>Attn: Mark Servilla UNM Biology, Castetter Hall 1480 MSC03-2020 219 Yale Blvd NE Albuquerque, NM 87131-0001</p>
+<p>We will utilize a delivery service of your choice, however, you will be responsible for all shipping arrangements and fees, including pre-arranging return delivery.</p>
+</section>
+<section id="data-package" class="level3" data-number="9.2.3">
+<h3 data-number="9.2.3" class="anchored" data-anchor-id="data-package"><span class="header-section-number">9.2.3</span> Data package</h3>
+<ul>
+<li>The external hard drive should contain at least two entities: the data (which will be offline) and an inventory or manifest that describe the contents of the external hard drive.</li>
+<li>Content of the manifest (inventory of holdings) would be dictated by the type of data entity. The <strong>manifest will be available as an online entity</strong> (through the EDI Data Portal) so that potential requestors can evaluate the offline resource before requesting it.</li>
+<li>Suggested columns are:
+<ul>
+<li>Filename(s)</li>
+<li>Format (netCDF, tabular csv, etc.)</li>
+<li>Start_datetime</li>
+<li>End_datetime</li>
+<li>Location_lat</li>
+<li>Location_lon</li>
+<li>(other params the PIs may feel are essential)</li>
+<li>Checksum</li>
+</ul></li>
 </ul>
 </section>
-<section id="fonts-and-typeface" class="level3">
-<h3 class="anchored" data-anchor-id="fonts-and-typeface">Fonts and typeface</h3>
-<p>Numbered examples of EML nodes are in fixed-width font:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span><span class="ot"> version=</span><span class="st">"1.0"</span><span class="ot"> encoding=</span><span class="st">"UTF-8"</span><span class="fu">?&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>XML element and attribute names, XPath and references to element names in text are in bold face. Single element names are surrounded by angle brackets, as they appear in XML.</p>
-<p>&lt;<strong>dataTable</strong>&gt;<br>
-<strong>/eml:eml/@packageId</strong></p>
-<p>Some recommendations have special context, e.g., an XML element or attribute may be requested by a community (e.g., LTER), or required by the EDI repository (but not by other repositories).</p>
-<p><em>Context notes: Recommendations for EML usage in a specific context are called “context notes”, and are placed in separate paragraphs, in italic.</em></p>
+<section id="package-metadata" class="level3" data-number="9.2.4">
+<h3 data-number="9.2.4" class="anchored" data-anchor-id="package-metadata"><span class="header-section-number">9.2.4</span> Package Metadata</h3>
+<p>(in EDI metadata template and converted to EML - generally, as for any data package)</p>
+<ul>
+<li>Abstract: describe the collection generally. If individual files require specific software to read, provide the name of that software.</li>
+<li>Creators</li>
+<li>Contact - The first listed contact is responsible for sending out copies as requested and is typically the EDI repository manager:</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">contact</span>&gt;</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">organizationName</span>&gt;Environmental Data Initiative&lt;/<span class="kw">organizationName</span>&gt;</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">electronicMailAddress</span>&gt;support@edirepository.org&lt;/<span class="kw">electronicMailAddress</span>&gt;</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">contact</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Methods - detailed collection/generation methods for the offline data entities. Detailed information for re-using the data. (May instead be included in the manifest table if different for different offline files.)</li>
+<li>Data Entities
+<ul>
+<li>Offline Entity:
+<ul>
+<li>Describe as you would for an online resource. Restate the software needed to read the individual files if this is important to a user. See <a href="#table_1">Table 1</a> and <a href="#sample_xml_offline">Sample XML</a>.</li>
+</ul></li>
+<li>Manifest (inventory of the offline holdings)
+<ul>
+<li>Column descriptions as for any data table</li>
+</ul></li>
+</ul></li>
+</ul>
 </section>
-<section id="definitions" class="level3">
-<h3 class="anchored" data-anchor-id="definitions">Definitions</h3>
-<p><strong>EML preparer</strong>: the person responsible for “building” the EML metadata record. Generally, this is a data manager working with a project or physical site that produces data.</p>
-<p><strong>Contributor</strong>: the research project contributing the data package, e.g., an LTER or OBFS site, or a Macrosystems project. Generally, the “EML preparer” works with or for the “Contributor.”</p>
-<p><strong>Data package</strong>: the EML metadata together with its entity or entities. This is generally the unit housed in repositories. We use this term to avoid confusion with the EML element “<strong>dataset</strong>”.</p>
+<section id="eml" class="level3" data-number="9.2.5">
+<h3 data-number="9.2.5" class="anchored" data-anchor-id="eml"><span class="header-section-number">9.2.5</span> EML</h3>
+<p>In addition to basic resource-level metadata, at least two entities should be described:</p>
+<ul>
+<li>Manifest (inventory) should be a tableEntity: will be the online entity and described as all</li>
+<li>Offline entity:
+<ul>
+<li>Fill out high-level fields as for an online resource. Restate the software needed to read the individual files if this is important to a user.</li>
+<li>Distribution node will be <code>offline</code> (See Table 1, code block)</li>
+</ul></li>
+</ul>
+<section id="table_1" class="level4" data-number="9.2.5.1">
+<h4 data-number="9.2.5.1" class="anchored" data-anchor-id="table_1"><span class="header-section-number">9.2.5.1</span> Table 1. Three required fields for an offline distribution</h4>
+<table>
+<tbody><tr>
+<td>
+physical/objectName
+</td>
+<td>
+As for any entity, this is the name of the file or data object
+</td>
+</tr>
+<tr>
+<td>
+dataFormat/ExternallyDefinedFormat/formatName
+</td>
+<td>
+The name of the format the data object is in. If there is a special compression applied, list it here.
+</td>
+</tr>
+<tr>
+<td>
+distribution/offline/mediumName
+</td>
+<td>
+Instead of a data URL, you will have an offline distribution node. The name of almost all offline media is “external drive”, because that is how you will deliver the data to a requestor.
+</td>
+</tr>
+</tbody></table>
 </section>
-<section id="other-eml-resources" class="level3">
-<h3 class="anchored" data-anchor-id="other-eml-resources">Other EML Resources</h3>
-<p>Some sections refer to further information or tools. These can be found on the EDI website, under “Resources”, at <a href="https://edirepository.org">https://edirepository.org</a></p>
+<section id="sample_xml_offline" class="level4" data-number="9.2.5.2">
+<h4 data-number="9.2.5.2" class="anchored" data-anchor-id="sample_xml_offline"><span class="header-section-number">9.2.5.2</span> Sample XML, offline entity</h4>
+<div class="sourceCode" id="cb2"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">physical</span>&gt;</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">objectName</span>&gt;mainl_2005acc.zip&lt;/<span class="kw">objectName</span>&gt;</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">dataFormat</span>&gt;</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">externallyDefinedFormat</span>&gt;</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>      &lt;<span class="kw">formatName</span>&gt;netCDF file&lt;/<span class="kw">formatName</span>&gt;</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    &lt;/<span class="kw">externallyDefinedFormat</span>&gt;</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">dataFormat</span>&gt;</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">distribution</span>&gt;</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">offline</span>&gt;</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>      &lt;<span class="kw">mediumName</span>&gt;External drive&lt;/<span class="kw">mediumName</span>&gt;</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    &lt;/<span class="kw">offline</span>&gt;</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">distribution</span>&gt;</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">physical</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+</section>
+<section id="references" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="references"><span class="header-section-number">9.3</span> References</h2>
+<section id="eml-documentation" class="level3" data-number="9.3.1">
+<h3 data-number="9.3.1" class="anchored" data-anchor-id="eml-documentation"><span class="header-section-number">9.3.1</span> EML documentation</h3>
+<p><a href="https://eml.ecoinformatics.org/schema/index.html">https://eml.ecoinformatics.org/schema/index.html</a></p>
+<p>Look for the PhysicalDistributionType</p>
+</section>
+</section>
+<section id="potential-issues" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="potential-issues"><span class="header-section-number">9.4</span> Potential Issues</h2>
+<ul>
+<li>SSD formatting (eventually, whatever we use, it will become unusable).</li>
+<li>Even with cloud storage, eventually a binary format will become unusable.</li>
+</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -776,13 +893,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../about.html" class="pagination-link" aria-label="About This Site">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">About This Site</span>
+      <a href="../guide-special-cases/other-repositories.html" class="pagination-link" aria-label="Data in Other Repositories">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Data in Other Repositories</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../guide-eml-bp/introduction.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../guide-domain-specific/preface.html" class="pagination-link" aria-label="Scientific domain specific metadata guide">
+        <span class="nav-page-text">Scientific domain specific metadata guide</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -791,4 +908,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/guide-eml-bp/preface.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/guide-special-cases/large-offline.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

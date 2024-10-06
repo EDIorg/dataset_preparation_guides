@@ -8,7 +8,7 @@
 
 <meta name="description" content="Best practice recommendations for data packages, described by Ecological Metadata Language (EML). 2022-05-25 version">
 
-<title>Best Practices for Dataset Metadata in Ecological Metadata Language (EML) – Data Package Best Practices</title>
+<title>6&nbsp; Spatial Data – Data Package Best Practices</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,8 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../guide-eml-bp/introduction.html" rel="next">
-<link href="../about.html" rel="prev">
+<link href="../guide-special-cases/moving-platforms.html" rel="next">
+<link href="../guide-special-cases/images-and-docs.html" rel="prev">
 <link href="../edi-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -117,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide-eml-bp/preface.html">Best Practices for Dataset Metadata in Ecological Metadata Language (EML)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide-special-cases/preface.html">Data Package Design for Special Cases</a></li><li class="breadcrumb-item"><a href="../guide-special-cases/spatial-data.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Spatial Data</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -159,7 +159,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../guide-eml-bp/preface.html" class="sidebar-item-text sidebar-link active">
+            <a href="../guide-eml-bp/preface.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Best Practices for Dataset Metadata in Ecological Metadata Language (EML)</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -209,7 +209,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../guide-special-cases/spatial-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../guide-special-cases/spatial-data.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Spatial Data</span></span></a>
   </div>
 </li>
@@ -278,22 +278,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#conventions-and-definitions" id="toc-conventions-and-definitions" class="nav-link active" data-scroll-target="#conventions-and-definitions">Conventions and Definitions</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">6.1</span> Introduction</a></li>
+  <li><a href="#recommendations-for-data-packages" id="toc-recommendations-for-data-packages" class="nav-link" data-scroll-target="#recommendations-for-data-packages"><span class="header-section-number">6.2</span> Recommendations for data packages</a>
   <ul class="collapse">
-  <li><a href="#audience" id="toc-audience" class="nav-link" data-scroll-target="#audience">Audience</a></li>
-  <li><a href="#fonts-and-typeface" id="toc-fonts-and-typeface" class="nav-link" data-scroll-target="#fonts-and-typeface">Fonts and typeface</a></li>
-  <li><a href="#definitions" id="toc-definitions" class="nav-link" data-scroll-target="#definitions">Definitions</a></li>
-  <li><a href="#other-eml-resources" id="toc-other-eml-resources" class="nav-link" data-scroll-target="#other-eml-resources">Other EML Resources</a></li>
+  <li><a href="#considerations-for-archiving-spatial-data" id="toc-considerations-for-archiving-spatial-data" class="nav-link" data-scroll-target="#considerations-for-archiving-spatial-data"><span class="header-section-number">6.2.1</span> Considerations for archiving spatial data</a></li>
+  <li><a href="#documenting-spatial-data-packages" id="toc-documenting-spatial-data-packages" class="nav-link" data-scroll-target="#documenting-spatial-data-packages"><span class="header-section-number">6.2.2</span> Documenting spatial data packages</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/guide-eml-bp/preface.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/guide-special-cases/spatial-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide-special-cases/preface.html">Data Package Design for Special Cases</a></li><li class="breadcrumb-item"><a href="../guide-special-cases/spatial-data.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Spatial Data</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Best Practices for Dataset Metadata in Ecological Metadata Language (EML)</h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Spatial Data</span></h1>
 </div>
 
 
@@ -310,46 +309,117 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div style="text-align:center;">
-<p>Version 3</p>
-<p>November 2017</p>
-<p>This document is managed and distributed by the Environmental Data Initiative (EDI)</p>
-<p>https://edirepository.org</p>
-<p>info@edirepository.org</p>
-</div>
-<p>Please cite as:</p>
-<p>Best Practices for Dataset Metadata in Ecological Metadata Language (EML Best Practices V3). 2017. Environmental Data Initiative.</p>
-<section id="conventions-and-definitions" class="level1">
-<h1>Conventions and Definitions</h1>
-<section id="audience" class="level3">
-<h3 class="anchored" data-anchor-id="audience">Audience</h3>
-<p>This document is intended for data managers. It assumes that readers are familiar with</p>
+<p>Contributors: Tim Whiteaker, John Porter, Mary Martin</p>
+<section id="introduction" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">6.1</span> Introduction</h2>
+<p>This document/chapter contains recommendations on data package structure and metadata for spatial datasets. Over the timeline of Long Term Ecological Research (LTER) Network?s use of the Ecological Metadata Language (EML), both spatial data formats and data curation options have evolved. In this document, focus on best practices that can be widely adopted with the goal of enhancing data discoverability and usability, and the understanding that there are multiple solutions to creating these data packages.</p>
+</section>
+<section id="recommendations-for-data-packages" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="recommendations-for-data-packages"><span class="header-section-number">6.2</span> Recommendations for data packages</h2>
+<section id="considerations-for-archiving-spatial-data" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="considerations-for-archiving-spatial-data"><span class="header-section-number">6.2.1</span> Considerations for archiving spatial data</h3>
+<section id="data-formats" class="level4" data-number="6.2.1.1">
+<h4 data-number="6.2.1.1" class="anchored" data-anchor-id="data-formats"><span class="header-section-number">6.2.1.1</span> Data formats</h4>
+<p>To maximize reuse, avoid proprietary formats. The formats listed below can be read or imported by most mainstream GIS programs or with code using libraries such as GDAL.</p>
+<p>Strongly recommended formats:</p>
 <ul>
-<li>the basic structure of an XML document, and the ability to edit in an XML editor like OxygenXML or XMLSpy.</li>
-<li>the process for contributing data to a repository. If you reached this document from a repository’s help-page, contact them for more information.</li>
+<li><strong>GeoTIFF</strong> - An open format for storing spatial raster data and metadata in a TIFF file.</li>
+<li><strong>GeoPackage</strong> - A standard format from the Open Geospatial Consortium (OGC) for storing vector and raster data in a SQLite database file.</li>
+</ul>
+<p>Some other formats to consider are listed below.</p>
+<ul>
+<li><strong>KML/KMZ</strong> - Keyhole Markup Language (KML) file and its zipped version for storing vector data. This format was popularized by Google Earth and is now an OGC standard. KML is best visualized in Google software and may not render as well in other GIS software.</li>
+<li><strong>GeoJSON</strong> - A format for storing vector data as text in JavaScript Object Notation (JSON). GeoJSON data are limited to the WGS84 coordinate system.</li>
+<li><strong>netCDF/HDF5</strong> - binary formats originally designed for storing multidimensional arrays of spatial data typically organized onto a grid, but which now can accommodate vector data following the NetCDF Climate and Forecast Conventions (version 1.8 or higher).</li>
+</ul>
+<p>A couple of Esri formats are worth mentioning and are listed below.</p>
+<ul>
+<li><strong>File geodatabase</strong> - One of Esri’s formats for storing vector and raster information. Several feature classes and rasters can be stored in this folder and file based structure. GDAL’s OpenFileGDB driver enables non-Esri software to view at least the data layers in a file geodatabase, but usage of more advanced file geodatabase components such as topology rules or geometric networks may not be available outside of Esri software. Field types may not be imported correctly either. Export to GeoPackage instead, unless geodatabase is the only format that supports the advanced representation of your GIS data. Just know that you limit potential reuse of your data if you use this format.</li>
+<li><strong>Shapefile</strong> - A legacy format for vector data which is widely supported. Be aware of <a href="https://en.wikipedia.org/wiki/Shapefile#Limitations">shapefile limitations</a> when considering this format. A shapefile consists of several individual files; include them as a single zip file in the data package. If the package has more than one shapefile, create a separate zip file for each shapefile.</li>
+</ul>
+<p>Although other open formats exist, their implementation in popular GIS software may be less common. If a proprietary format must be used to capture the full meaning of the data, consider also including a version of the data in an open format such as a simple data table along with metadata explaining its limitations in that format, or instructions on how to utilize the proprietary format. For example, an Esri layer package could be used when including recommended symbols for drawing vector features in a GIS is desired, in which case one could note that the vector data can be extracted by treating the layer package as a zip file.</p>
+<p>Formats that are composed of more than one file, such as shapefiles, should be zipped. Include one dataset per zip file. For example, if you have 10 shapefiles, you would create 10 zip files.</p>
+</section>
+</section>
+<section id="documenting-spatial-data-packages" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="documenting-spatial-data-packages"><span class="header-section-number">6.2.2</span> Documenting spatial data packages</h3>
+<section id="document-as-spatialraster-vector-vs.-otherentity-in-eml" class="level4" data-number="6.2.2.1">
+<h4 data-number="6.2.2.1" class="anchored" data-anchor-id="document-as-spatialraster-vector-vs.-otherentity-in-eml"><span class="header-section-number">6.2.2.1</span> Document as spatial[Raster, Vector] vs.&nbsp;otherEntity in EML</h4>
+<p>There is a noticeable divergence in EDI spatial data packages, specifically, in the use of otherEntity vs spatial[Raster,Vector]. Here we discuss pros and cons of why one might choose to document spatial data with one type of EML entity over another. Either method is acceptable, and we recommend using spatial[Raster,Vector] when feasible. The documentation that follows provides best practices that will maximize discoverability and useability of spatial data, regardless of the entity type used.</p>
+</section>
+<section id="otherentity" class="level4" data-number="6.2.2.2">
+<h4 data-number="6.2.2.2" class="anchored" data-anchor-id="otherentity"><span class="header-section-number">6.2.2.2</span> <a href="https://eml.ecoinformatics.org/schema/eml-dataset_xsd.html#DatasetType_otherEntity">otherEntity</a></h4>
+<ul>
+<li>Pros
+<ul>
+<li>EML preparation is simpler than with the spatial EML types</li>
+<li>Allows aggregated data structures (e.g., file geodatabases)</li>
+</ul></li>
+<li>Cons
+<ul>
+<li>Spatial data stored as &lt;otherEntity&gt; might be harder to discover because it may be difficult to determine if data in an &lt;otherEntity&gt; is spatial data or some other type when searching or browsing</li>
+<li>There is currently no controlled keywording to identify spatial data files that are included as otherEntity in EML</li>
+<li>Tabular attributes of geometric entities may not be described in detail</li>
+<li>Units (latitude/longitude vs meters vs feet) and projections may not be identified</li>
+</ul></li>
 </ul>
 </section>
-<section id="fonts-and-typeface" class="level3">
-<h3 class="anchored" data-anchor-id="fonts-and-typeface">Fonts and typeface</h3>
-<p>Numbered examples of EML nodes are in fixed-width font:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span><span class="ot"> version=</span><span class="st">"1.0"</span><span class="ot"> encoding=</span><span class="st">"UTF-8"</span><span class="fu">?&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>XML element and attribute names, XPath and references to element names in text are in bold face. Single element names are surrounded by angle brackets, as they appear in XML.</p>
-<p>&lt;<strong>dataTable</strong>&gt;<br>
-<strong>/eml:eml/@packageId</strong></p>
-<p>Some recommendations have special context, e.g., an XML element or attribute may be requested by a community (e.g., LTER), or required by the EDI repository (but not by other repositories).</p>
-<p><em>Context notes: Recommendations for EML usage in a specific context are called “context notes”, and are placed in separate paragraphs, in italic.</em></p>
+<section id="spatialrastervector" class="level4" data-number="6.2.2.3">
+<h4 data-number="6.2.2.3" class="anchored" data-anchor-id="spatialrastervector"><span class="header-section-number">6.2.2.3</span> spatial[<a href="https://eml.ecoinformatics.org/schema/eml-dataset_xsd.html#DatasetType_spatialRaster">Raster</a>,<a href="https://eml.ecoinformatics.org/schema/eml-dataset_xsd.html#DatasetType_spatialVector">Vector</a>]</h4>
+<ul>
+<li>Pros
+<ul>
+<li>EML more fully describes vector attributes</li>
+<li>There is a well documented path from Esri metadata to EML</li>
+<li>An EML metadata search (on EDI or elsewhere) clearly identifies these as spatial datasets through the use of spatialRaster or spatialVector entities</li>
+<li>LTER has built applications based on spatial[Raster,Vector] entities</li>
+</ul></li>
+<li>Cons
+<ul>
+<li>Data may not originate in ArcGIS, requiring a custom workflow to generate spatial entity EML</li>
+<li>Spatial[Raster,Vector] can?t describe multi-layer aggregates of GIS data (e.g., geodatabases containing multiple feature classes)</li>
+</ul></li>
+</ul>
 </section>
-<section id="definitions" class="level3">
-<h3 class="anchored" data-anchor-id="definitions">Definitions</h3>
-<p><strong>EML preparer</strong>: the person responsible for “building” the EML metadata record. Generally, this is a data manager working with a project or physical site that produces data.</p>
-<p><strong>Contributor</strong>: the research project contributing the data package, e.g., an LTER or OBFS site, or a Macrosystems project. Generally, the “EML preparer” works with or for the “Contributor.”</p>
-<p><strong>Data package</strong>: the EML metadata together with its entity or entities. This is generally the unit housed in repositories. We use this term to avoid confusion with the EML element “<strong>dataset</strong>”.</p>
+<section id="keywords" class="level4" data-number="6.2.2.4">
+<h4 data-number="6.2.2.4" class="anchored" data-anchor-id="keywords"><span class="header-section-number">6.2.2.4</span> Keywords</h4>
+<p>Clearly identifying a dataset as spatial in nature is important to discoverability. This can be achieved by the use of keywords in the EML keyword elements as well as in the title/abstract and methods where appropriate. Keywords frequently searched include: GIS, geographic information system, spatial data, plus the more specific format names like shapefile, geoTIFF etc. Consider including as appropriate.</p>
+<p>Do include the keywords <strong>spatial vector</strong> and <strong>spatial raster</strong> as appropriate for your data. These keywords should be used especially if the data are archived as otherEntity.</p>
+<p>You may also include keywords that describe broad spatial data layers, e.g., digital elevation model, elevation, boundary, land use, land cover, census, parcel, imagery, as well as keywords that describe the specifics associated with a broad spatial data layer, e.g., land cover types such as water and vegetation types, land use types such as urban and forest, and so on.</p>
 </section>
-<section id="other-eml-resources" class="level3">
-<h3 class="anchored" data-anchor-id="other-eml-resources">Other EML Resources</h3>
-<p>Some sections refer to further information or tools. These can be found on the EDI website, under “Resources”, at <a href="https://edirepository.org">https://edirepository.org</a></p>
+<section id="gis-software-compatible-metadata" class="level4" data-number="6.2.2.5">
+<h4 data-number="6.2.2.5" class="anchored" data-anchor-id="gis-software-compatible-metadata"><span class="header-section-number">6.2.2.5</span> GIS software compatible metadata</h4>
+<p>GIS platforms will not ingest EML metadata. If your GIS software creates its own metadata file specific to that software, then it may be included as otherEntity. Be sure to populate this metadata, for example with descriptions and units for attributes in vector data or raster attribute tables. However, metadata in the standard ISO 19115 or CSDGM format to enable the metadata to be read by other GIS software is more useful.</p>
+</section>
+<section id="attribute-and-coordinate-system-detail-for-otherentity" class="level4" data-number="6.2.2.6">
+<h4 data-number="6.2.2.6" class="anchored" data-anchor-id="attribute-and-coordinate-system-detail-for-otherentity"><span class="header-section-number">6.2.2.6</span> Attribute and coordinate system detail for otherEntity</h4>
+<p>While the GIS software compatible metadata included in the package typically describes attributes and coordinate systems of the data, such descriptions should also be included in the EML metadata to help users determine fit for use prior to data download. The EML spatialVector and spatialRaster types include elements for this purpose. EML otherEntity can also include attribute descriptions; however, inclusion of attributes in this more generic element may not be as common, and the element does not formally support a description of coordinate systems.</p>
+<p>When using <a href="https://eml.ecoinformatics.org/schema/eml-dataset_xsd.html#DatasetType_otherEntity">otherEntity</a> instead of spatialVector or spatialRaster, include coordinate system details in the otherEntity/entityDescription element. If not including a description of attributes in the otherEntity/attributeList element, at least include a summary description of attributes in otherEntity/entityDescription. If the spatial dataset and its associated metadata files are the only items in the data package, then you can include these descriptions in higher level EML elements such as the dataset abstract in addition to or in place of descriptions at the entity level.</p>
+</section>
+<section id="standardized-content-for-formats-and-entity-types" class="level4" data-number="6.2.2.7">
+<h4 data-number="6.2.2.7" class="anchored" data-anchor-id="standardized-content-for-formats-and-entity-types"><span class="header-section-number">6.2.2.7</span> Standardized content for formats and entity types</h4>
+<p>In EML physical/dataFormat/externallyDefinedFormat, include a <strong>formatName</strong> indicating the spatial data file format. We recommend using format names from the <a href="https://cn.dataone.org/cn/v2/formats">DataONE format list</a> when possible. Some spatial items from that list are shown below. Always check the list for the most up-to-date version of these names.</p>
+<ul>
+<li>Esri Shapefile (zipped)</li>
+<li>Google Earth Keyhole Markup Language (KML)</li>
+<li>Google Earth Keyhole Markup Language (KML) Compressed archive</li>
+<li>Network Common Data Format, version 4</li>
+<li>Hierarchical Data Format version 5 (HDF5)</li>
+<li>GeoTIFF</li>
+<li>GeoPackage Encoding Standard (OGC) Format Family</li>
+<li>Esri File Geodatabase (zipped)</li>
+<li>GeoJSON, version RFC 7946</li>
+</ul>
+<p>If your format is not included in the DataONE list, consider submitting an issue to that GitHub repository’s issue tracker so that the format can be added.</p>
+<p>EML <strong>formatVersion</strong>, a sibling of formatName can be used to indicate the format version as in the example EML snippet below.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">externallyDefinedFormat</span>&gt;</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">formatName</span>&gt;Network Common Data Format, version 4&lt;/<span class="kw">formatName</span>&gt;</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">formatVersion</span>&gt;netCDF-4 classic&lt;/<span class="kw">formatVersion</span>&gt;</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">externallyDefinedFormat</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>For otherEntity, when populating the <strong>entityType</strong> element, use <strong>spatial raster</strong> or <strong>spatial vector</strong> as appropriate.</p>
 
 
+</section>
 </section>
 </section>
 
@@ -776,13 +846,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../about.html" class="pagination-link" aria-label="About This Site">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">About This Site</span>
+      <a href="../guide-special-cases/images-and-docs.html" class="pagination-link" aria-label="Images and Documents as Data">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Images and Documents as Data</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../guide-eml-bp/introduction.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../guide-special-cases/moving-platforms.html" class="pagination-link" aria-label="Data Gathered with Small Moving Platforms">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Data Gathered with Small Moving Platforms</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -791,4 +861,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/guide-eml-bp/preface.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/guide-special-cases/spatial-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

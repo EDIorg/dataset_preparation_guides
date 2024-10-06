@@ -8,7 +8,7 @@
 
 <meta name="description" content="Best practice recommendations for data packages, described by Ecological Metadata Language (EML). 2022-05-25 version">
 
-<title>Best Practices for Dataset Metadata in Ecological Metadata Language (EML) – Data Package Best Practices</title>
+<title>7&nbsp; Data Gathered with Small Moving Platforms – Data Package Best Practices</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -65,8 +31,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../guide-eml-bp/introduction.html" rel="next">
-<link href="../about.html" rel="prev">
+<link href="../guide-special-cases/other-repositories.html" rel="next">
+<link href="../guide-special-cases/spatial-data.html" rel="prev">
 <link href="../edi-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -117,7 +83,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide-eml-bp/preface.html">Best Practices for Dataset Metadata in Ecological Metadata Language (EML)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide-special-cases/preface.html">Data Package Design for Special Cases</a></li><li class="breadcrumb-item"><a href="../guide-special-cases/moving-platforms.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Data Gathered with Small Moving Platforms</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -159,7 +125,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../guide-eml-bp/preface.html" class="sidebar-item-text sidebar-link active">
+            <a href="../guide-eml-bp/preface.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Best Practices for Dataset Metadata in Ecological Metadata Language (EML)</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -215,7 +181,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../guide-special-cases/moving-platforms.html" class="sidebar-item-text sidebar-link">
+  <a href="../guide-special-cases/moving-platforms.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Data Gathered with Small Moving Platforms</span></span></a>
   </div>
 </li>
@@ -278,22 +244,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#conventions-and-definitions" id="toc-conventions-and-definitions" class="nav-link active" data-scroll-target="#conventions-and-definitions">Conventions and Definitions</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">7.1</span> Introduction</a></li>
+  <li><a href="#recommendations-for-data-packages" id="toc-recommendations-for-data-packages" class="nav-link" data-scroll-target="#recommendations-for-data-packages"><span class="header-section-number">7.2</span> Recommendations for data packages</a>
   <ul class="collapse">
-  <li><a href="#audience" id="toc-audience" class="nav-link" data-scroll-target="#audience">Audience</a></li>
-  <li><a href="#fonts-and-typeface" id="toc-fonts-and-typeface" class="nav-link" data-scroll-target="#fonts-and-typeface">Fonts and typeface</a></li>
-  <li><a href="#definitions" id="toc-definitions" class="nav-link" data-scroll-target="#definitions">Definitions</a></li>
-  <li><a href="#other-eml-resources" id="toc-other-eml-resources" class="nav-link" data-scroll-target="#other-eml-resources">Other EML Resources</a></li>
+  <li><a href="#metadata-for-moving-platform-data-packages-at-edi" id="toc-metadata-for-moving-platform-data-packages-at-edi" class="nav-link" data-scroll-target="#metadata-for-moving-platform-data-packages-at-edi"><span class="header-section-number">7.2.1</span> Metadata for moving platform data packages at EDI</a></li>
+  <li><a href="#examples-and-additional-metadata-guidance" id="toc-examples-and-additional-metadata-guidance" class="nav-link" data-scroll-target="#examples-and-additional-metadata-guidance"><span class="header-section-number">7.2.2</span> Examples and additional metadata guidance</a></li>
+  </ul></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources"><span class="header-section-number">7.3</span> Resources</a>
+  <ul class="collapse">
+  <li><a href="#tips-and-tricks" id="toc-tips-and-tricks" class="nav-link" data-scroll-target="#tips-and-tricks"><span class="header-section-number">7.3.1</span> Tips and Tricks</a></li>
+  <li><a href="#semantic-annotation" id="toc-semantic-annotation" class="nav-link" data-scroll-target="#semantic-annotation"><span class="header-section-number">7.3.2</span> Semantic Annotation</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">7.3.3</span> References</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/guide-eml-bp/preface.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/guide-special-cases/moving-platforms.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide-special-cases/preface.html">Data Package Design for Special Cases</a></li><li class="breadcrumb-item"><a href="../guide-special-cases/moving-platforms.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Data Gathered with Small Moving Platforms</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Best Practices for Dataset Metadata in Ecological Metadata Language (EML)</h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Data Gathered with Small Moving Platforms</span></h1>
 </div>
 
 
@@ -310,44 +281,112 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div style="text-align:center;">
-<p>Version 3</p>
-<p>November 2017</p>
-<p>This document is managed and distributed by the Environmental Data Initiative (EDI)</p>
-<p>https://edirepository.org</p>
-<p>info@edirepository.org</p>
-</div>
-<p>Please cite as:</p>
-<p>Best Practices for Dataset Metadata in Ecological Metadata Language (EML Best Practices V3). 2017. Environmental Data Initiative.</p>
-<section id="conventions-and-definitions" class="level1">
-<h1>Conventions and Definitions</h1>
-<section id="audience" class="level3">
-<h3 class="anchored" data-anchor-id="audience">Audience</h3>
-<p>This document is intended for data managers. It assumes that readers are familiar with</p>
+<p>Contributors: Sarah Elmendorf (lead), Tim Whiteaker, Lindsay Barbieri, Jane Wyngaard, Greg Maurer, Hap Garritt, Adam Sapp, Corinna Gries, Stace Beaulieu</p>
+<section id="introduction" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">7.1</span> Introduction</h2>
+<p>Modern advances in technology have increasingly allowed the collection of ecological data using small, often uncrewed, moving platforms. Systems variously known as small Uncrewed Aircraft Systems (sUAS), Uncrewed Surface Vehicles (USV), Autonomous, Uncrewed Underwater Vehicles (AUV or UUV) or ?drones,? more generally, now frequently serve as sensor carrying platforms. Moving platforms may also include gliders or animals with sensors affixed. Depending on the sensor(s) installed on the moving platform, data collected may include environmental measurements (temperature, concentration of chemicals), imagery (digital photos, multi- or hyperspectral sensors), or other remote-sensing acquisitions (ranging data, ground-penetrating radar). Example research applications include studies of vegetation cover and phenology, snowpack cover and depth, ground surface temperature, terrain elevation, bathymetry, species distribution or abundance, and many others.</p>
+<p>Raw drone data can be voluminous and challenging to archive, but after processing, derived drone datasets typically resemble the more conventional spatial datasets that are regularly used in ecological research. In this document we focus on best practices for archiving raw and derived drone data, with particular attention to metadata and processing code that is specific to drone datasets. Note that this chapter does not specifically address data collected by large moving platforms like airplanes and satellites, or by human and animal platforms.</p>
+</section>
+<section id="recommendations-for-data-packages" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="recommendations-for-data-packages"><span class="header-section-number">7.2</span> Recommendations for data packages</h2>
+<p>General considerations for archiving data from moving sensor platforms</p>
 <ul>
-<li>the basic structure of an XML document, and the ability to edit in an XML editor like OxygenXML or XMLSpy.</li>
-<li>the process for contributing data to a repository. If you reached this document from a repository’s help-page, contact them for more information.</li>
+<li><strong>Repository</strong>: We are currently unaware of many specialized repositories for these data, and therefore, EDI is used as the representative data repository for many cases presented here. Repositories other than EDI may have specific metadata formatting requirements, but the general recommendations with regard to content could presumably be applied. For LiDAR based UAV data, consider contributing to Open Topography <a href="https://opentopography.org/">https://opentopography.org/</a>); for AUV data, the U.S. Marine Geoscience Data System (MGDS) (<a href="http://www.marine-geo.org/index.php">http://www.marine-geo.org/index.php</a>) which serves the IEDA “MGDL” node in DataONE is a good option. Glider data may be contributed to the U.S. IOOS Glider DAC (<a href="https://slack-redir.net/link?url=https%3A%2F%2Fgliders.ioos.us%2Fdata%2F&amp;v=3">https://gliders.ioos.us/data/</a>), archived at the National Centers for Environmental Information (NCEI) thus fulfilling NSF OCE Data Policy. If a decision is made to archive an LTER drone dataset in an external (i.e.&nbsp;non-EDI) repository but links to EDI data packages are desired, recommendations in the <a href="data-in-other-repositories.html">Data in Other Repositories</a> chapter may apply.</li>
+<li><strong>Size of data set</strong>: The file size of raw data from drone imagery can be substantial. If large volumes of raw data (&gt;100 GB in total) are to be archived on EDI, please coordinate with EDI and follow the best practices for <a href="large-data-sets.htm">Large Data Sets</a>. Even if raw data are in a proprietary binary format and specific software is required for processing, publishing them may be important for reprocessing when software improves.</li>
+<li><strong>Designing a data package</strong>: In many applications of moving sensor data, raw images/measurements must be processed to arrive at data products that can be analyzed to answer research questions. To enable a fully reproducible analysis pipeline, we recommend archiving three components: the raw data, any key derived data products (e.g., orthomosaic images, DEMs, DSMs, NDVI, landcover, snow depth, or surface temperature maps), and the processing code. These three components may be archived in separate data packages or together, and each should follow accepted best practices for its data type. To archive raw image collections, for example, see the considerations on grouping images into compressed archives (.zip, .tar) and creating an inventory file, as described in the <a href="images-and-documents-as-data.html">Images and Documents as Data</a> chapter. For derived geospatial files, such as DEMs, refer to the <a href="spatial-data.htm">Spatial Data</a> chapter. Custom processing code should be archived with the data following recommendations in the <a href="code.html">Code in EDI</a> chapter. If a standalone program is used to process data, reference the program in the methods metadata with adequate details to ensure reproducibility (name, version, date, configuration, etc.).</li>
+</ul>
+<section id="metadata-for-moving-platform-data-packages-at-edi" class="level3" data-number="7.2.1">
+<h3 data-number="7.2.1" class="anchored" data-anchor-id="metadata-for-moving-platform-data-packages-at-edi"><span class="header-section-number">7.2.1</span> Metadata for moving platform data packages at EDI</h3>
+<p>The data package should include metadata elements that, at a minimum, (a) identify it as being collected by a moving platform, (b) deliver basic information about the data collection platform, instrument payload (camera, sensors), and procedure (flight information or similar), and (c) deliver necessary information about post-processing of the raw camera or sensor data, if any. Accordingly, these recommendations vary based on whether the data package contains raw or derived data.</p>
+<p>High level metadata pertaining to the entire data package are easily provided in the EML file (e.g.&nbsp;a geographic bounding box). Data packages from drones or other moving platforms commonly include numerous point measurements, images, or other granular data entities, either separately or inside a compressed archive file. Detailed metadata pertaining to these data entities may be included as additional files in the data package. Inventory tables, usually a simple CSV file, are one such additional metadata format. For example, an inventory table could be used to list individual data files in the data package (e.g., images from one drone flight) and provide metadata (e.g.&nbsp;point location) about each. In addition to inventory tables, files that enable or supplement common processing pipelines, such as flight or mission logs, may be included. A flight/mission log may be provided in a proprietary binary format, but because software for parsing these formats may become obsolete, we recommend archiving the log in the format most useful for contemporary analysis software, and extracting and appending the information to the inventory file where appropriate. Exif (Exchangeable image file format) metadata in images may also be programmatically extracted to supplement the inventory file.</p>
+<p>Clearly, there are many possible ways to combine raw data, derived data, and metadata files into a moving platform data package. No matter the combination, the critical metadata categories and the recommended contents below should be considered and included where possible. The decision on whether to provide the metadata in EML or at a more granular level, such as an inventory table, will depend on the given dataset.</p>
+<ul>
+<li><strong>Methods:</strong> unique identifier for a given flight or mission; summary information from a flight log; weather conditions; accuracy of sensor and geographic location information; data processing method; ground sample distance; image overlap; flight height; whether UAS followed terrain elevation vs fixed-height flight; location of UAS launch (since some image metadata are derived from this); general description of software used and for what purpose; sensor calibration date and procedure; general description of payload type, such as multispectral camera and spectral bands.</li>
+<li><strong>Instrumentation:</strong> make and model of platform, sensor, and camera, including manufacturer and specific model names and numbers. Include make and model of any interchangeable lenses in cameras. Specifics like spectral bands, temperature range, sensor accuracy, etc.</li>
+<li><strong>Software:</strong> (see also <a href="code.html">Code in EDI</a> chapter) list of software used. Especially when code is proprietary or archived elsewhere, the name, version, and configuration of any software used are advisable, as are corrections applied (e.g., correction for sensor angle or heat/air flow). Ideally, a .pdf report generated by processing software can be archived as an otherEntity together with the imagery itself to convey much of the necessary information. Also include data used as a ground truth or calibration points for post processing (e.g.&nbsp;spectral calibration image/biomass sample/wind speed/etc) and their date of collection.</li>
+<li><strong>People with specified role:</strong> drone operator, image processor</li>
+<li><strong>Geographic Information:</strong> (see also <a href="sptial-data.html">Spatial Data chapter</a>) a general bounding box should be included in EML, while the individual location of images or point measurements should be handled in the inventory table, or directly in the included data files. Also include the coordinate reference system (e.g., WGS 84) used for images and (if different) ground control points, projection type if needed, altitude of image/measurement acquisition, spatio-temporal coordinates, pitch, roll, and yaw from flight log or image data points. It should be noted that there are special considerations for underwater vehicles, especially with regard to metadata to explain how geographic positions were obtained. With autonomous underwater vehicles (AUVs), there can be error sources in the topside GPS localization, the underwater acoustic positioning system (e.g., Long Baseline, Ultrashort Baseline), as well as any sensors used for dead reckoning (e.g., accelerometer, Doppler Velocity Log). At a minimum, it would be useful to know which sensors were used to produce the localization data and whether the navigation tracklines were post-processed with benchmarks.</li>
+<li><strong>Temporal Information:</strong> may also be provided at the EML level or as timestamps for individual data/image points, either in inventory tables or in the data files themselves. Time of day critically affects useability for image-based datasets; so ensure that the time of day is clear from the metadata available prior to download, either in the EML temporal coverage or via the methods.</li>
+<li><strong>Keywords:</strong> Use of appropriate keywords aids in data discovery. Keywords that identify datasets as drone-related are therefore recommended (e.g.&nbsp;drone, UAV, UAS). Keywords describing the type of data collected are also recommended (e.g.&nbsp;image collection, aerial imagery, thermal imagery, NDVI, digital elevation map). For drone mapping data products, keyword recommendations from the <a href="spatial-data.html">Spatial Data chapter</a> are largely applicable.</li>
 </ul>
 </section>
-<section id="fonts-and-typeface" class="level3">
-<h3 class="anchored" data-anchor-id="fonts-and-typeface">Fonts and typeface</h3>
-<p>Numbered examples of EML nodes are in fixed-width font:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span><span class="ot"> version=</span><span class="st">"1.0"</span><span class="ot"> encoding=</span><span class="st">"UTF-8"</span><span class="fu">?&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>XML element and attribute names, XPath and references to element names in text are in bold face. Single element names are surrounded by angle brackets, as they appear in XML.</p>
-<p>&lt;<strong>dataTable</strong>&gt;<br>
-<strong>/eml:eml/@packageId</strong></p>
-<p>Some recommendations have special context, e.g., an XML element or attribute may be requested by a community (e.g., LTER), or required by the EDI repository (but not by other repositories).</p>
-<p><em>Context notes: Recommendations for EML usage in a specific context are called “context notes”, and are placed in separate paragraphs, in italic.</em></p>
+<section id="examples-and-additional-metadata-guidance" class="level3" data-number="7.2.2">
+<h3 data-number="7.2.2" class="anchored" data-anchor-id="examples-and-additional-metadata-guidance"><span class="header-section-number">7.2.2</span> Examples and additional metadata guidance</h3>
+<p>Several EDI data packages for data from moving platforms are presented as examples in Table 1. Many more detailed, ?drone-specific? metadata terms and values can be included in data packages for drones and other moving platforms. For completeness we have developed a comprehensive list of recommended and optional metadata terms based on the work of Wyngaard et al.&nbsp;(2019), Thorner et al.&nbsp;(2020), with mappings to select relevant ontologies, viewable <a href="https://docs.google.com/spreadsheets/d/1PQ0SUEQLgQXdz2PUNDy2jGry3o9veAedcz8l-5ubpwU">here</a>. For each metadata element, we assessed its utility in terms of data discovery, evaluating fitness for use, and actual data reuse. The minimum recommended subsets of metadata that are included in the section above were derived from this table.</p>
+<p>Table 1. Example packages at EDI and other repositories</p>
+<table>
+<tbody><tr>
+<td>
+<strong>Title</strong>
+</td>
+<td>
+<strong>Description</strong>
+</td>
+<td>
+<strong>EDI packageID</strong>
+</td>
+</tr>
+<tr>
+<td>
+<em>Orthophoto and elevation models from UAV overflights at the G-IBPE study site at Jornada Basin LTER in 2019</em>
+</td>
+<td>
+Approximately 599 RGB images and data derived from uncrewed aerial vehicle (UAV) overflights of the G-IBPE study site at the Jornada Basin LTER in southern New Mexico, USA.
+</td>
+<td>
+<a href="https://portal-s.edirepository.org/nis/mapbrowse?scope=knb-lter-jrn&amp;identifier=210543001">knb-lter-jrn.210543001</a>
+</td>
+</tr>
+<tr>
+<td>
+<em>Aerial imagery from unmanned aerial systems (UAS) flights and ground control points: Plum Island Estuary and Parker River NWR (PRNWR), February 27th, 2018.</em>
+</td>
+<td>
+USGS Aerial imagery UAS flights at the Parker River National Wildlife Refuge, Massachusetts, USA, includes ground control, multispectral and true color child items which each have data entities that include ground control or a file catalog of images
+</td>
+<td>
+<a href="https://www.sciencebase.gov/catalog/item/5c0fe16de4b0c53ecb2d1bc3">ScienceBase</a>
+</td>
+</tr>
+<tr>
+<td>
+<em>Spatial variability in water chemistry of four Wisconsin aquatic ecosystems - High speed limnology Environmental Science and Technology datasets</em>
+</td>
+<td>
+water chemistry sensors embedded in a high-speed water intake system to document spatial variability.
+</td>
+<td>
+<a href="https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-ntl.337.4">knb-lter-ntl.337.4</a>
+</td>
+</tr>
+<tr>
+<td>
+<em>Thermal infrared, multispectral, and photogrammetric data collected by drone for hydrogeologic analysis of the East River beaver-impacted corridor near Crested Butte, Colorado</em>
+</td>
+<td>
+infrared, multispectral, visual image data, and derivative products (orthomosaic and digital surface model) collected along a beaver-impacted section of the East River from August 12-17, 2017 and July 28-August 2, 2018.
+</td>
+<td>
+<a href="https://www.sciencebase.gov/catalog/item/5ccc4cc9e4b09b8c0b78c97a">ScienceBase</a>
+</td>
+</tr>
+</tbody></table>
 </section>
-<section id="definitions" class="level3">
-<h3 class="anchored" data-anchor-id="definitions">Definitions</h3>
-<p><strong>EML preparer</strong>: the person responsible for “building” the EML metadata record. Generally, this is a data manager working with a project or physical site that produces data.</p>
-<p><strong>Contributor</strong>: the research project contributing the data package, e.g., an LTER or OBFS site, or a Macrosystems project. Generally, the “EML preparer” works with or for the “Contributor.”</p>
-<p><strong>Data package</strong>: the EML metadata together with its entity or entities. This is generally the unit housed in repositories. We use this term to avoid confusion with the EML element “<strong>dataset</strong>”.</p>
 </section>
-<section id="other-eml-resources" class="level3">
-<h3 class="anchored" data-anchor-id="other-eml-resources">Other EML Resources</h3>
-<p>Some sections refer to further information or tools. These can be found on the EDI website, under “Resources”, at <a href="https://edirepository.org">https://edirepository.org</a></p>
+<section id="resources" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="resources"><span class="header-section-number">7.3</span> Resources</h2>
+<section id="tips-and-tricks" class="level3" data-number="7.3.1">
+<h3 data-number="7.3.1" class="anchored" data-anchor-id="tips-and-tricks"><span class="header-section-number">7.3.1</span> Tips and Tricks</h3>
+<p>For making an image catalog (.csv) from a directory of images, consider using the exif tool <a href="https://exiftool.org/">https://exiftool.org/</a>. For example, the command ?exiftool.exe -csv -r mydirectory &gt; image_catalog.csv? will extract the entirety of the exif tags from all files stored under mydirectory into a comma-delimited table and write it to the the file image_catalog.csv</p>
+</section>
+<section id="semantic-annotation" class="level3" data-number="7.3.2">
+<h3 data-number="7.3.2" class="anchored" data-anchor-id="semantic-annotation"><span class="header-section-number">7.3.2</span> Semantic Annotation</h3>
+<p>Semantic annotation of drone imagery is a rapidly developing field. Ontologies that provide relevant terms include: <a href="http://www.dronetology.net/">dronetology</a>; <a href="http://www.sensorml.com/ontologies.html">sensorML</a>; <a href="https://www.fgdc.gov/metadata/csdgm/">FGDC content standard for digital geospatial metadata</a> (not officially an ontology but a structured metadata format with defined terms); <a href="https://www.w3.org/TR/vocab-ssn/">Semantic Sensor Network ontology</a> (SSN, including the SOSA core); <a href="https://bioportal.bioontology.org/ontologies/SWEET">Semantic Web for Earth and Environment Technology ontology</a> (SWEET); and <a href="http://www.obofoundry.org/ontology/envo.html">Environment Ontology</a>.</p>
+</section>
+<section id="references" class="level3" data-number="7.3.3">
+<h3 data-number="7.3.3" class="anchored" data-anchor-id="references"><span class="header-section-number">7.3.3</span> References</h3>
+<p>Thomer, Andrea K., Swanz, Sarah, Barbieri, Lindsay, Wyngaard, Jane. (2020). A minimum information framework the FAIR collection of earth and environmental science data with drones. DOI: 10.5281/zenodo.4017647</p>
+<p>Wyngaard, J.; Barbieri, L.; Thomer, A.; Adams, J.; Sullivan, D.; Crosby, C.; Parr, C.; Klump, J.; Raj Shrestha, S.; Bell, T. Emergent Challenges for Science sUAS Data Management: Fairness through Community Engagement and Best Practices Development. <em>Remote Sens.</em> <strong>2019</strong>, <em>11</em>, 1797.</p>
 
 
 </section>
@@ -776,13 +815,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../about.html" class="pagination-link" aria-label="About This Site">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">About This Site</span>
+      <a href="../guide-special-cases/spatial-data.html" class="pagination-link" aria-label="Spatial Data">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Spatial Data</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../guide-eml-bp/introduction.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../guide-special-cases/other-repositories.html" class="pagination-link" aria-label="Data in Other Repositories">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Data in Other Repositories</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -791,4 +830,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/guide-eml-bp/preface.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/guide-special-cases/moving-platforms.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
