@@ -1,7 +1,20 @@
 on:
   workflow_dispatch:
   push:
-    branches: main
+    branches: 
+      - main
+      - prerelease
+  workflow_call:
+    inputs:
+      ref: 
+        required: true
+        description: 'The ref to trigger the workflow on'
+        type: string
+      prerelease:
+        required: true
+        description: 'Whether to deploy prerelease or release site'
+        type: boolean
+        default: false
 
 name: Quarto Publish
 
@@ -18,8 +31,16 @@ jobs:
         uses: quarto-dev/quarto-actions/setup@v2
 
       - name: Render and Publish
+        if: ${{ format('{0}', inputs.prerelease) == 'false' }}
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Render and Publish to netlify
+        if: ${{ format('{0}', inputs.prerelease) != 'false' }}
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: netlify
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
