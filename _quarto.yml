@@ -33,7 +33,9 @@ book:
 
     - part: guide-domain-specific/preface.qmd
       chapters:
-        - guide-domain-specific/scientific-domain.qmd
+        - guide-domain-specific/ecocom.qmd
+        - guide-domain-specific/hymet.qmd
+        - guide-domain-specific/soil-carbon.qmd
     - references.qmd
 
 execute:

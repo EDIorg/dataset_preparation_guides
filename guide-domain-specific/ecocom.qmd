@@ -1,12 +1,15 @@
+# Ecological community surveys
 
-# Introduction
+DRAFT DRAFT DRAFT
+
+## Introduction
 
 We know from experience that primary research data sets cannot be easily reused until all data are completely understood. Community survey data in particular, can be highly complex, often with location-specific methods.  Some general principles can be summarized from:
 
 - synthesis scientists working with this type of data
 - lessons learned from harmonization of primary data, e.g., EDI's `ecocomDP` project.
 
-## Authors
+### Authors
 - Margaret O'Brien (https://orcid.org/0000-0002-1693-8322)
 - ecocomDP working group: https://edirepository.org/resources/thematic-standardization
 
@@ -100,7 +103,7 @@ Taxa can be resolved
         * example (*if all they had included was the column called “sp_code”):  [https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter-sbc.17.33](https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter-sbc.17.33)      
 
 
-###  Table column names
+### Table column names
 Metadata can be matched to entity column
 
 *   **Best**: attributeName exactly matches column header  
@@ -126,27 +129,3 @@ Foreign Key linkages are clear
     *   url 
 
 Table linkages are most important for harmonization; synthesis efforts may be able to circumvent issues (and elevate a "not useable" dataset to "marginal") by dropping records without referents in key fields.
-
-## Meteorology and Hydrology data
-
-### Introduction
-This is a summary page. it should have links out for details.
-
-
-#### Synthesis use
-para here about CUAHSI, with link to that project.
-
-### Recommendations for datasets
-summary here.
-
-## Soil Carbon
-
-### Introduction
-Page desribing BPs for data packages about soil carbon. it will probably have links out for details.
-
-
-#### Synthesis use
-para here about current synthesis use, eg, Weider WG.
-
-### Recommendations for datasets
-summary here.
