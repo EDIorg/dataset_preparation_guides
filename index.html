@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Environmental Data Initiative">
-<meta name="description" content="Best practice recommendations for data packages, described by Ecological Metadata Language (EML). 2022-05-25 version">
+<meta name="author" content="Environmental Data Initiative and colleagues">
+<meta name="description" content="Community-developed guides for preparing and publishing datasets in the environmental sciences, and similar contexts, using the Ecological Metadata Language (EML).">
 
-<title>Data Package Best Practices</title>
+<title>EDI Dataset Preparation Guides</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -98,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Data Package Best Practices</a> 
+      <a href="./">EDI Dataset Preparation Guides</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/ediorg/dataset_preparation_guides" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
 </div>
@@ -246,11 +246,11 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
   <ul class="collapse">
-  <li><a href="#book-sections" id="toc-book-sections" class="nav-link" data-scroll-target="#book-sections">Book sections</a>
+  <li><a href="#books" id="toc-books" class="nav-link" data-scroll-target="#books">Books</a>
   <ul class="collapse">
-  <li><a href="#eml-metadata-concepts" id="toc-eml-metadata-concepts" class="nav-link" data-scroll-target="#eml-metadata-concepts">EML Metadata Concepts</a></li>
-  <li><a href="#data-package-design" id="toc-data-package-design" class="nav-link" data-scroll-target="#data-package-design">Data Package Design</a></li>
-  <li><a href="#data-products-for-synthesis-research" id="toc-data-products-for-synthesis-research" class="nav-link" data-scroll-target="#data-products-for-synthesis-research">Data Products for Synthesis Research</a></li>
+  <li><a href="#best-practices-for-dataset-metadata-in-ecological-metadata-language-eml" id="toc-best-practices-for-dataset-metadata-in-ecological-metadata-language-eml" class="nav-link" data-scroll-target="#best-practices-for-dataset-metadata-in-ecological-metadata-language-eml">Best Practices for Dataset Metadata in Ecological Metadata Language (EML)</a></li>
+  <li><a href="#data-package-design-for-special-cases" id="toc-data-package-design-for-special-cases" class="nav-link" data-scroll-target="#data-package-design-for-special-cases">Data Package Design for Special Cases</a></li>
+  <li><a href="#scientific-domain-specific-dataset-guidelines" id="toc-scientific-domain-specific-dataset-guidelines" class="nav-link" data-scroll-target="#scientific-domain-specific-dataset-guidelines">Scientific Domain-Specific Dataset Guidelines</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -261,12 +261,12 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data Package Best Practices</h1>
+<h1 class="title">EDI Dataset Preparation Guides</h1>
 </div>
 
 <div>
   <div class="description">
-    Best practice recommendations for data packages, described by Ecological Metadata Language (EML). 2022-05-25 version
+    Community-developed guides for preparing and publishing datasets in the environmental sciences, and similar contexts, using the Ecological Metadata Language (EML).
   </div>
 </div>
 
@@ -276,7 +276,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Environmental Data Initiative </p>
+             <p>Environmental Data Initiative and colleagues </p>
           </div>
   </div>
     
@@ -297,7 +297,23 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="overview" class="level1 unnumbered">
 <h1 class="unnumbered">Overview</h1>
-<p>This website contains current "Best Practice" recommendations for ecological and environmental science data packages. These recommendations are directed towards the following goals:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>This website and all documents are in development. Use with caution.</strong></p>
+<p>Content in the current production version was originally taken and lightly modified from EDI’s <a href="https://ediorg.github.io/data-package-best-practices/"><em>Data Package Best Practices</em></a> site (2022-05-25 version, see the <a href="https://github.com/EDIorg/data-package-best-practices">repo</a>).</p>
+<p>Newer, community-led content is available in the <a href="https://prerelease-edi-docs.netlify.app">prerelease version</a>.</p>
+</div>
+</div>
+<p>This website contains a series of documents about preparing and publishing datasets in the environmental sciences and similar contexts. Topics include community-developed metadata standards, serialization and markup formatting guidelines, best practices for content in ecological synthesis datasets, and more. This documentation is maintained by the <a href="https://edirepository.org">Environmental Data Initiative</a> (EDI) and all content has been developed and written in coordination with EDI’s community of scientists, data managers, and repository users.</p>
+<p>Guides published here are directed towards the following goals:</p>
 <ul>
 <li>Minimize heterogeneity of EML-described data packages to simplify development and re-use of software</li>
 <li>Maximize interoperability to facilitate data synthesis</li>
@@ -308,24 +324,20 @@ ul.task-list li input[type="checkbox"] {
 <li>prepare a data product for synthesis</li>
 </ul></li>
 </ul>
-<p>To participate in the “Best Practices for Data Packages” project, see “<a href="./about.html">About this site</a>”.</p>
-<p>This site is rendered as a Quarto book. To learn more about Quarto books visit <a href="https://quarto.org/docs/books" class="uri">https://quarto.org/docs/books</a>.</p>
-<section id="book-sections" class="level2">
-<h2 class="anchored" data-anchor-id="book-sections">Book sections</h2>
-<section id="eml-metadata-concepts" class="level3">
-<h3 class="anchored" data-anchor-id="eml-metadata-concepts"><a href="guide-eml-bp/eml-best-practices.qmd">EML Metadata Concepts</a></h3>
+<p>To contribute to these documents or participate in the associated working groups, see the “<a href="./about.html">About this site</a>” page or the <a href="https://github.com/EDIorg/dataset_preparation_guides">repository README</a>. This website and all documents are rendered as a <a href="https://quarto.org/docs/books">Quarto book</a>.</p>
+<section id="books" class="level2">
+<h2 class="anchored" data-anchor-id="books">Books</h2>
+<section id="best-practices-for-dataset-metadata-in-ecological-metadata-language-eml" class="level3">
+<h3 class="anchored" data-anchor-id="best-practices-for-dataset-metadata-in-ecological-metadata-language-eml"><a href="./guide-eml-bp/preface.html">Best Practices for Dataset Metadata in Ecological Metadata Language (EML)</a></h3>
 <p>The recommendations for EML metadata apply to all data packages. This section subsumes V3 of the static PDF document “Best Practices for Dataset Metadata in Ecological Metadata Language (EML),” last updated in 2017. The entire most recent (versioned, citable) release will be made available as a PDF.</p>
-<p><strong><a href="guide-eml-bp/eml-best-practices.qmd">Best Practices for Dataset Metadata in Ecological Metadata Language (EML)</a></strong></p>
 </section>
-<section id="data-package-design" class="level3">
-<h3 class="anchored" data-anchor-id="data-package-design"><a href="guide-special-cases/dataset-design-special-cases.qmd">Data Package Design</a></h3>
+<section id="data-package-design-for-special-cases" class="level3">
+<h3 class="anchored" data-anchor-id="data-package-design-for-special-cases"><a href="./guide-special-cases/preface.html">Data Package Design for Special Cases</a></h3>
 <p>Considerations for a well designed data package including special cases based on data type, format, or acquisition method. Examples are images, documents, raw data stored in other repositories.</p>
-<p><strong><a href="guide-special-cases/dataset-design-special-cases.qmd">Recommendations for data package design</a></strong></p>
 </section>
-<section id="data-products-for-synthesis-research" class="level3">
-<h3 class="anchored" data-anchor-id="data-products-for-synthesis-research"><a href="guide-domain-specific/scientific-domain.qmd">Data Products for Synthesis Research</a></h3>
-<p>Recommendations for community developed data products. The data packages are derived from raw data and reformatted to meet certain data harmonization standards. Many of these data products have extensive related code bases, which recommendations can take into account and link to.</p>
-<p><strong><a href="guide-domain-specific/scientific-domain.qmd">Recommendations for data products from specific scientific domains</a></strong></p>
+<section id="scientific-domain-specific-dataset-guidelines" class="level3">
+<h3 class="anchored" data-anchor-id="scientific-domain-specific-dataset-guidelines"><a href="./guide-domain-specific/preface.html">Scientific Domain-Specific Dataset Guidelines</a></h3>
+<p><em>Very much a work in progress.</em> Recommendations for community-developed data products from specific scientific domains. Not all scientific domains are covered. The data packages are derived from raw data and reformatted to meet certain data harmonization standards, often with extensive related code bases.</p>
 
 
 </section>

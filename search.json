@@ -2,19 +2,19 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Data Package Best Practices",
+    "title": "EDI Dataset Preparation Guides",
     "section": "",
-    "text": "Overview\nThis website contains current \"Best Practice\" recommendations for ecological and environmental science data packages. These recommendations are directed towards the following goals:\nTo participate in the “Best Practices for Data Packages” project, see “About this site”.\nThis site is rendered as a Quarto book. To learn more about Quarto books visit https://quarto.org/docs/books.",
+    "text": "Overview\nThis website contains a series of documents about preparing and publishing datasets in the environmental sciences and similar contexts. Topics include community-developed metadata standards, serialization and markup formatting guidelines, best practices for content in ecological synthesis datasets, and more. This documentation is maintained by the Environmental Data Initiative (EDI) and all content has been developed and written in coordination with EDI’s community of scientists, data managers, and repository users.\nGuides published here are directed towards the following goals:\nTo contribute to these documents or participate in the associated working groups, see the “About this site” page or the repository README. This website and all documents are rendered as a Quarto book.",
     "crumbs": [
       "Overview"
     ]
   },
   {
-    "objectID": "index.html#book-sections",
-    "href": "index.html#book-sections",
-    "title": "Data Package Best Practices",
-    "section": "Book sections",
-    "text": "Book sections\n\nEML Metadata Concepts\nThe recommendations for EML metadata apply to all data packages. This section subsumes V3 of the static PDF document “Best Practices for Dataset Metadata in Ecological Metadata Language (EML),” last updated in 2017. The entire most recent (versioned, citable) release will be made available as a PDF.\nBest Practices for Dataset Metadata in Ecological Metadata Language (EML)\n\n\nData Package Design\nConsiderations for a well designed data package including special cases based on data type, format, or acquisition method. Examples are images, documents, raw data stored in other repositories.\nRecommendations for data package design\n\n\nData Products for Synthesis Research\nRecommendations for community developed data products. The data packages are derived from raw data and reformatted to meet certain data harmonization standards. Many of these data products have extensive related code bases, which recommendations can take into account and link to.\nRecommendations for data products from specific scientific domains",
+    "objectID": "index.html#books",
+    "href": "index.html#books",
+    "title": "EDI Dataset Preparation Guides",
+    "section": "Books",
+    "text": "Books\n\nBest Practices for Dataset Metadata in Ecological Metadata Language (EML)\nThe recommendations for EML metadata apply to all data packages. This section subsumes V3 of the static PDF document “Best Practices for Dataset Metadata in Ecological Metadata Language (EML),” last updated in 2017. The entire most recent (versioned, citable) release will be made available as a PDF.\n\n\nData Package Design for Special Cases\nConsiderations for a well designed data package including special cases based on data type, format, or acquisition method. Examples are images, documents, raw data stored in other repositories.\n\n\nScientific Domain-Specific Dataset Guidelines\nVery much a work in progress. Recommendations for community-developed data products from specific scientific domains. Not all scientific domains are covered. The data packages are derived from raw data and reformatted to meet certain data harmonization standards, often with extensive related code bases.",
     "crumbs": [
       "Overview"
     ]
@@ -670,7 +670,7 @@
     "href": "guide-special-cases/preface.html",
     "title": "Data Package Design for Special Cases",
     "section": "",
-    "text": "blah",
+    "text": "Considerations for a well designed data package including special cases based on data type, format, or acquisition method. Examples are images, documents, raw data stored in other repositories.",
     "crumbs": [
       "Data Package Design for Special Cases"
     ]
@@ -680,7 +680,7 @@
     "href": "guide-domain-specific/preface.html",
     "title": "Scientific domain specific metadata guide",
     "section": "",
-    "text": "This document contains current recommendations for data packages from specific scientific domains. Not all scientific domains are covered.\nSee navigation menu.",
+    "text": "Very much a work in progress.\nRecommendations for community-developed data products from specific scientific domains. Not all scientific domains are covered. The data packages are derived from raw data and reformatted to meet certain data harmonization standards. Many of these data products have extensive related code bases, which recommendations can take into account and link to.",
     "crumbs": [
       "Scientific domain specific metadata guide"
     ]
