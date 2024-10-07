@@ -6,6 +6,10 @@ on:
       - prerelease
   workflow_call:
     inputs:
+      ref: 
+        required: true
+        description: 'The ref to trigger the workflow on'
+        type: string
       prerelease:
         required: true
         description: 'Whether to deploy prerelease or production site'
