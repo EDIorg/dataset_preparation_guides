@@ -31,7 +31,8 @@ jobs:
         uses: quarto-dev/quarto-actions/setup@v2
 
       - name: Render and Publish
-        if: ${{ format('{0}', inputs.prerelease) == 'false' }}
+        #if: ${{ format('{0}', inputs.prerelease) == 'false' }}
+        if: ${{ format('{0}', inputs.prerelease) == 'false' || (!inputs.prerelease && contains(fromJSON('["push", "workflow_dispatch"]'), github.event_name) && github.ref == 'refs/heads/main') }}
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
@@ -39,7 +40,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Render and Publish to netlify
-        if: ${{ format('{0}', inputs.prerelease) != 'false' }}
+        # if: ${{ format('{0}', inputs.prerelease) != 'false' }}
+        if: ${{ inputs.prerelease || (format('{0}', inputs.prerelease) != 'false' && contains(fromJSON('["push", "workflow_dispatch"]'), github.event_name) && github.ref == 'refs/heads/prerelease') }}
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: netlify
