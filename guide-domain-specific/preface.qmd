@@ -1,4 +1,11 @@
-# Scientific domain specific metadata guide {.unnumbered}
+---
+title: Scientific Domain-Specific Metadata Guide
+date: '2019'
+author: Margaret O'Brien and others
+title-block-banner: false
+---
+
+# Preface {.unnumbered}
 
 _Very much a work in progress._ 
 

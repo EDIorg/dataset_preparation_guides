@@ -14,7 +14,7 @@ It is not always easy to determine who among project personnel (IMs, scientists,
 
 ## Recommendations for data packages
 
-![Figure 1: Flowchart for considering archival paths for various model components.](../images/model_datasets.png "model data management flowchart")
+![Figure 1: Flowchart for considering archival paths for various model components.](img/guide-special-cases-model-fig1.png "model data management flowchart")
 
 ### Referencing models in EML
 

@@ -26,7 +26,7 @@ To contribute to these documents or participate in the associated working groups
 ## Books
 
 ### [Best Practices for Dataset Metadata in Ecological Metadata Language (EML)](guide-eml-bp/preface.qmd)
-The recommendations for EML metadata apply to all data packages. This section subsumes V3 of the static PDF document "Best Practices for Dataset Metadata in Ecological Metadata Language (EML)," last updated in 2017. The entire most recent (versioned, citable) release will be made available as a PDF. 
+The recommendations for EML metadata apply to all data packages. This book is a reproduction of V3 of the static PDF document "Best Practices for Dataset Metadata in Ecological Metadata Language (EML)," last updated in 2017. The entire most recent (versioned, citable) release will be made available as a PDF. 
   
 ### [Data Package Design for Special Cases](guide-special-cases/preface.qmd)
 Considerations for a well designed data package including special cases based on data type, format, or acquisition method. Examples are images, documents, raw data stored in other repositories. 

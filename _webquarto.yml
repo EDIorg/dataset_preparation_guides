@@ -1,0 +1,66 @@
+project:
+  type: site
+  output-dir: _site
+
+website:
+  title: "Dataset Preparation Guides"
+  #author: "Environmental Data Initiative and colleagues"
+  description: "Community-developed guides for preparing and publishing datasets in the environmental sciences, and similar contexts, using the Ecological Metadata Language (EML)."
+  #date: "`r Sys.Date()`"
+  bread-crumbs: true
+  favicon: edi-logo.png
+  site-url: https://ediorg.github.io/dataset_preparation_guides
+  repo-url: https://github.com/ediorg/dataset_preparation_guides
+  repo-branch: main
+  repo-actions: [edit, issue]
+  navbar:
+    logo: edi-logo.png
+    background: light
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - section: "EML Best Practices"
+        href: guide-eml-bp/preface.qmd
+        contents:
+          - guide-eml-bp/introduction.qmd
+          - guide-eml-bp/content-recommendations.qmd
+      - section: "Special Cases"
+        href: guide-special-cases/preface.qmd
+        contents: 
+          - guide-special-cases/code.qmd
+          - guide-special-cases/model-based.qmd
+          - guide-special-cases/images-and-docs.qmd
+          - guide-special-cases/spatial-data.qmd
+          - guide-special-cases/moving-platforms.qmd
+          - guide-special-cases/other-repositories.qmd
+          - guide-special-cases/large-offline.qmd
+      - section: "Discipline-Specific"
+        href: guide-domain-specific/preface.qmd
+        contents:
+          - guide-domain-specific/ecocom.qmd
+          - guide-domain-specific/hymet.qmd
+          - guide-domain-specific/soil-carbon.qmd
+      - references.qmd
+
+execute:
+  freeze: auto
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: flatly
+    fontsize: 0.95em
+    css: styles.css
+    toc: true
+#  pdf:
+#    documentclass: scrreprt
+
+
+

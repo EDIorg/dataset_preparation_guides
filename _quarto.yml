@@ -6,12 +6,15 @@ book:
   title: "EDI Dataset Preparation Guides"
   author: "Environmental Data Initiative and colleagues"
   description: "Community-developed guides for preparing and publishing datasets in the environmental sciences, and similar contexts, using the Ecological Metadata Language (EML)."
-  date: "`r Sys.Date()`"
+  date: "2022-05-25"
   favicon: edi-logo.png
   site-url: https://ediorg.github.io/dataset_preparation_guides
   repo-url: https://github.com/ediorg/dataset_preparation_guides
   repo-branch: main
   repo-actions: [edit, issue]
+  navbar:
+    search: true
+    logo: edi-logo.png
   chapters:
     - index.qmd
     - about.qmd
