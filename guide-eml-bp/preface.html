@@ -6,6 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="EML Best Practices Committee">
+<meta name="dcterms.date" content="2017-11-01">
 <meta name="description" content="Community-developed guides for preparing and publishing datasets in the environmental sciences, and similar contexts, using the Ecological Metadata Language (EML).">
 
 <title>Best Practices for Dataset Metadata in Ecological Metadata Language (EML) – EDI Dataset Preparation Guides</title>
@@ -78,11 +80,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -108,10 +110,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../edi-logo.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">EDI Dataset Preparation Guides</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+    <a href="https://github.com/ediorg/dataset_preparation_guides" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -120,29 +138,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide-eml-bp/preface.html">Best Practices for Dataset Metadata in Ecological Metadata Language (EML)</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
     </div>
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="../">EDI Dataset Preparation Guides</a> 
-        <div class="sidebar-tools-main">
-    <a href="https://github.com/ediorg/dataset_preparation_guides" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-</div>
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -236,7 +238,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../guide-domain-specific/preface.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Scientific domain specific metadata guide</span></a>
+ <span class="menu-text">Scientific Domain-Specific Metadata Guide</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -278,12 +280,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#conventions-and-definitions" id="toc-conventions-and-definitions" class="nav-link active" data-scroll-target="#conventions-and-definitions">Conventions and Definitions</a>
+  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
+  <ul class="collapse">
+  <li><a href="#conventions-and-definitions" id="toc-conventions-and-definitions" class="nav-link" data-scroll-target="#conventions-and-definitions">Conventions and Definitions</a>
   <ul class="collapse">
   <li><a href="#audience" id="toc-audience" class="nav-link" data-scroll-target="#audience">Audience</a></li>
   <li><a href="#fonts-and-typeface" id="toc-fonts-and-typeface" class="nav-link" data-scroll-target="#fonts-and-typeface">Fonts and typeface</a></li>
   <li><a href="#definitions" id="toc-definitions" class="nav-link" data-scroll-target="#definitions">Definitions</a></li>
   <li><a href="#other-eml-resources" id="toc-other-eml-resources" class="nav-link" data-scroll-target="#other-eml-resources">Other EML Resources</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/ediorg/dataset_preparation_guides/edit/main/guide-eml-bp/preface.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ediorg/dataset_preparation_guides/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -294,13 +299,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Best Practices for Dataset Metadata in Ecological Metadata Language (EML)</h1>
+<p class="subtitle lead">Version 3</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>EML Best Practices Committee </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 1, 2017</p>
+    </div>
+  </div>
   
     
   </div>
@@ -310,17 +328,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<section id="preface" class="level1 unnumbered">
+<h1 class="unnumbered">Preface</h1>
 <div style="text-align:center;">
-<p>Version 3</p>
-<p>November 2017</p>
 <p>This document is managed and distributed by the Environmental Data Initiative (EDI)</p>
-<p>https://edirepository.org</p>
-<p>info@edirepository.org</p>
+<p>https://edirepository.org | info@edirepository.org</p>
 </div>
+<p>The recommendations for EML metadata apply to all data packages. This book is a reproduction of V3 of the static PDF document “Best Practices for Dataset Metadata in Ecological Metadata Language (EML),” last updated in 2017. The entire most recent (versioned, citable) release will be made available as a PDF.</p>
 <p>Please cite as:</p>
 <p>Best Practices for Dataset Metadata in Ecological Metadata Language (EML Best Practices V3). 2017. Environmental Data Initiative.</p>
-<section id="conventions-and-definitions" class="level1">
-<h1>Conventions and Definitions</h1>
+<section id="conventions-and-definitions" class="level2">
+<h2 class="anchored" data-anchor-id="conventions-and-definitions">Conventions and Definitions</h2>
 <section id="audience" class="level3">
 <h3 class="anchored" data-anchor-id="audience">Audience</h3>
 <p>This document is intended for data managers. It assumes that readers are familiar with</p>
@@ -350,6 +368,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Some sections refer to further information or tools. These can be found on the EDI website, under “Resources”, at <a href="https://edirepository.org">https://edirepository.org</a></p>
 
 
+</section>
 </section>
 </section>
 

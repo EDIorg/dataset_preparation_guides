@@ -14,7 +14,7 @@
     "href": "index.html#books",
     "title": "EDI Dataset Preparation Guides",
     "section": "Books",
-    "text": "Books\n\nBest Practices for Dataset Metadata in Ecological Metadata Language (EML)\nThe recommendations for EML metadata apply to all data packages. This section subsumes V3 of the static PDF document “Best Practices for Dataset Metadata in Ecological Metadata Language (EML),” last updated in 2017. The entire most recent (versioned, citable) release will be made available as a PDF.\n\n\nData Package Design for Special Cases\nConsiderations for a well designed data package including special cases based on data type, format, or acquisition method. Examples are images, documents, raw data stored in other repositories.\n\n\nScientific Domain-Specific Dataset Guidelines\nVery much a work in progress. Recommendations for community-developed data products from specific scientific domains. Not all scientific domains are covered. The data packages are derived from raw data and reformatted to meet certain data harmonization standards, often with extensive related code bases.",
+    "text": "Books\n\nBest Practices for Dataset Metadata in Ecological Metadata Language (EML)\nThe recommendations for EML metadata apply to all data packages. This book is a reproduction of V3 of the static PDF document “Best Practices for Dataset Metadata in Ecological Metadata Language (EML),” last updated in 2017. The entire most recent (versioned, citable) release will be made available as a PDF.\n\n\nData Package Design for Special Cases\nConsiderations for a well designed data package including special cases based on data type, format, or acquisition method. Examples are images, documents, raw data stored in other repositories.\n\n\nScientific Domain-Specific Dataset Guidelines\nVery much a work in progress. Recommendations for community-developed data products from specific scientific domains. Not all scientific domains are covered. The data packages are derived from raw data and reformatted to meet certain data harmonization standards, often with extensive related code bases.",
     "crumbs": [
       "Overview"
     ]
@@ -531,7 +531,7 @@
     "section": "",
     "text": "10.1 Introduction\nWe know from experience that primary research data sets cannot be easily reused until all data are completely understood. Community survey data in particular, can be highly complex, often with location-specific methods. Some general principles can be summarized from:",
     "crumbs": [
-      "Scientific domain specific metadata guide",
+      "Scientific Domain-Specific Metadata Guide",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Ecological community surveys</span>"
     ]
   },
@@ -542,7 +542,7 @@
     "section": "",
     "text": "synthesis scientists working with this type of data\nlessons learned from harmonization of primary data, e.g., EDI’s ecocomDP project.\n\n\n10.1.1 Authors\n\nMargaret O’Brien (https://orcid.org/0000-0002-1693-8322)\necocomDP working group: https://edirepository.org/resources/thematic-standardization",
     "crumbs": [
-      "Scientific domain specific metadata guide",
+      "Scientific Domain-Specific Metadata Guide",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Ecological community surveys</span>"
     ]
   },
@@ -553,7 +553,7 @@
     "section": "10.2 Anticipated use cases",
     "text": "10.2 Anticipated use cases\n\n10.2.1 Synthesis\nSynthesis requires that primary research data sets be understood and combined into a similar format. EDI has examined the needs of synthesis scientists using community survey data, and that feedback is incorporated here.\n\n\n10.2.2 Harmonization\nAlthough a prescribed format would make data easily reused, the complexity of community surveys generally means that a prescribed format cannot be imposed on research studies. Therefore, EDI is harmonizing this data type in a workflow framework, and the lessons learned from examining raw data are included here. For more information on EDI’s harmonization of community survey data, see: - https://github.com/EDIorg/ecocomDP - https://edirepository.org/resources/thematic-standardization#ecocomdp\n\n\n10.2.3 External applications\nCommunity survey data are of great interest to the broader biodiversity community, particularly through their support for portals such as GBIF, and the use of the Darwin Core Vocabulary. Harmonization is the first step in this process.",
     "crumbs": [
-      "Scientific domain specific metadata guide",
+      "Scientific Domain-Specific Metadata Guide",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Ecological community surveys</span>"
     ]
   },
@@ -564,7 +564,7 @@
     "section": "10.3 Definitions and conventions",
     "text": "10.3 Definitions and conventions\nThe recommendations and examples below are organized according to how easily the data are reused. In all cases Best is preferred, and recommended. Marginal and not useable may overlap in some situations. - Best: Data are easily understood (do not require manual handling or further investigation) - OK: Some manual, custom or specialized handling required - Marginal: Additional metadata is required, along with custom handling and probably investigation (e.g., questions answered via email) - Not useable: the dataset has significant metadata missing; or has too many inconsistencies or layout challenges for it to be used even with manual handling.",
     "crumbs": [
-      "Scientific domain specific metadata guide",
+      "Scientific Domain-Specific Metadata Guide",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Ecological community surveys</span>"
     ]
   },
@@ -575,7 +575,7 @@
     "section": "10.4 Recommendations for datasets",
     "text": "10.4 Recommendations for datasets\n\n10.4.1 Sampling methods\nMethods are generally text metadata * Best * explanation of the sampling strategy. * diagrams of sampling plots and their spatial relationships * OK * reference included to a paper describing the above * Marginal/not usable * no description of methods\n\n\n10.4.2 Dates\nTemporal sampling regime is consistent\n\nBest: A column for dateTime is in the entity, and its format is consistent throughout\n\nexample: https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter-mcr.6.56\n\nOK: sampling regime changes over time (yyyy, vs yyyy-mm-dd) * YYYY, vs YYYY-MM-DD\nNot useable: date and time columns are not typed in EML as dateTimes (i.e, typed as strings, as below)\n\n\nSynthesis efforts may be able to circumvent the lack of true dates by dropping records (and elevate a “not useable” dataset to “marginal”)\n*the ECC currently checks attributes typed as dateTime in two ways:\n\nformat compared to a preferred list formats\nif the format is in the preferred list, checks agreement of data values with that format\n\n\n\n\n10.4.3 Locations\nShould be complete, with latitude and longitude\n\nBest: Columns for digital lat/lon\n\nexample: https://portal.edirepository.org/nis/metadataviewer?packageid=edi.5.3\n\nOK (need custom processing):\n\nIn metadata only:\n\nexample: https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter-sbc.17.33\n\nDeg-min-sec (strings)\nLocations in second table\n\nNot useable: sites codes without lat/lon\n\n\n\n10.4.4 Site nesting\nSampling site nesting can be understood\n\nBest: subsites are labeled\n\nexample: https://portal.edirepository.org/nis/metadataviewer?packageid=edi.5.3\n\nOK:\nNot useable:\n\n\n\n\n10.4.5 Taxa\nTaxa can be resolved\n\nBest: Taxon codes in the entity itself, assigned at source by those familiar with these taxonomic groups\n\nexample: https://portal.edirepository.org/nis/metadataviewer?packageid=edi.3.5\n\nOK: species binomials (ids will have to be added later, by someone less familiar with these taxa)\n\nexample: https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter-sbc.17.33\nNot useable: local codes only\n\nexample (*if all they had included was the column called “sp_code”): https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter-sbc.17.33\n\n\n\n\n\n10.4.6 Table column names\nMetadata can be matched to entity column\n\nBest: attributeName exactly matches column header\n\nexample https://portal.edirepository.org/nis/metadataviewer?packageid=edi.3.5\n\nOK: can be matched by manual examination\n\nexample https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter-mcr.1039.9\n\nMarginal: no header\n\nexample\n\n\nThis feature has come up in other discussions. The EML metadata asserts what the content of a column is, however there is no explicit “key” into that column except for the column header in the data entity itself. If these do not match (or there is no table header), then there is nothing to go on but trust. That’s fine if data are shared only within a tightly knit community, but is less reliable when data are reused outside the orginating group.\nthe ECC currently checks that number of columns and their typing match (within the limits of an RDB). For attributeNames, It shows you the first line of the table for manual comparison (an info check).\n\n\n10.4.7 Table linkages\nForeign Key linkages are clear\n\nBest: EML constraint included, with referential integrity\n\nexample https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter-mcr.6.56\n\nOK: FK detected manually, has referential integrity\n\nurl\n\nNot useable: FK detected manually, but no referential integrity\n\nurl\n\n\nTable linkages are most important for harmonization; synthesis efforts may be able to circumvent issues (and elevate a “not useable” dataset to “marginal”) by dropping records without referents in key fields.",
     "crumbs": [
-      "Scientific domain specific metadata guide",
+      "Scientific Domain-Specific Metadata Guide",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Ecological community surveys</span>"
     ]
   },
@@ -586,7 +586,7 @@
     "section": "",
     "text": "11.1 Introduction\nThis is a summary page. it should have links out for details.",
     "crumbs": [
-      "Scientific domain specific metadata guide",
+      "Scientific Domain-Specific Metadata Guide",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Hydrology and Meteorology Data</span>"
     ]
   },
@@ -597,7 +597,7 @@
     "section": "",
     "text": "11.1.1 Synthesis use\npara here about CUAHSI, with link to that project.",
     "crumbs": [
-      "Scientific domain specific metadata guide",
+      "Scientific Domain-Specific Metadata Guide",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Hydrology and Meteorology Data</span>"
     ]
   },
@@ -608,7 +608,7 @@
     "section": "11.2 Recommendations for datasets",
     "text": "11.2 Recommendations for datasets\nsummary here.",
     "crumbs": [
-      "Scientific domain specific metadata guide",
+      "Scientific Domain-Specific Metadata Guide",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Hydrology and Meteorology Data</span>"
     ]
   },
@@ -619,7 +619,7 @@
     "section": "",
     "text": "12.1 Introduction\nPage desribing BPs for data packages about soil carbon. it will probably have links out for details.",
     "crumbs": [
-      "Scientific domain specific metadata guide",
+      "Scientific Domain-Specific Metadata Guide",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Soil Carbon</span>"
     ]
   },
@@ -630,7 +630,7 @@
     "section": "",
     "text": "12.1.1 Synthesis use\npara here about current synthesis use, eg, Weider WG.",
     "crumbs": [
-      "Scientific domain specific metadata guide",
+      "Scientific Domain-Specific Metadata Guide",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Soil Carbon</span>"
     ]
   },
@@ -641,7 +641,7 @@
     "section": "12.2 Recommendations for datasets",
     "text": "12.2 Recommendations for datasets\nsummary here.",
     "crumbs": [
-      "Scientific domain specific metadata guide",
+      "Scientific Domain-Specific Metadata Guide",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Soil Carbon</span>"
     ]
   },
@@ -660,7 +660,17 @@
     "href": "guide-eml-bp/preface.html",
     "title": "Best Practices for Dataset Metadata in Ecological Metadata Language (EML)",
     "section": "",
-    "text": "Version 3\nNovember 2017\nThis document is managed and distributed by the Environmental Data Initiative (EDI)\nhttps://edirepository.org\ninfo@edirepository.org\n\nPlease cite as:\nBest Practices for Dataset Metadata in Ecological Metadata Language (EML Best Practices V3). 2017. Environmental Data Initiative.\n\nConventions and Definitions\n\nAudience\nThis document is intended for data managers. It assumes that readers are familiar with\n\nthe basic structure of an XML document, and the ability to edit in an XML editor like OxygenXML or XMLSpy.\nthe process for contributing data to a repository. If you reached this document from a repository’s help-page, contact them for more information.\n\n\n\nFonts and typeface\nNumbered examples of EML nodes are in fixed-width font:\n&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;\nXML element and attribute names, XPath and references to element names in text are in bold face. Single element names are surrounded by angle brackets, as they appear in XML.\n&lt;dataTable&gt;\n/eml:eml/@packageId\nSome recommendations have special context, e.g., an XML element or attribute may be requested by a community (e.g., LTER), or required by the EDI repository (but not by other repositories).\nContext notes: Recommendations for EML usage in a specific context are called “context notes”, and are placed in separate paragraphs, in italic.\n\n\nDefinitions\nEML preparer: the person responsible for “building” the EML metadata record. Generally, this is a data manager working with a project or physical site that produces data.\nContributor: the research project contributing the data package, e.g., an LTER or OBFS site, or a Macrosystems project. Generally, the “EML preparer” works with or for the “Contributor.”\nData package: the EML metadata together with its entity or entities. This is generally the unit housed in repositories. We use this term to avoid confusion with the EML element “dataset”.\n\n\nOther EML Resources\nSome sections refer to further information or tools. These can be found on the EDI website, under “Resources”, at https://edirepository.org",
+    "text": "Preface\nThe recommendations for EML metadata apply to all data packages. This book is a reproduction of V3 of the static PDF document “Best Practices for Dataset Metadata in Ecological Metadata Language (EML),” last updated in 2017. The entire most recent (versioned, citable) release will be made available as a PDF.\nPlease cite as:\nBest Practices for Dataset Metadata in Ecological Metadata Language (EML Best Practices V3). 2017. Environmental Data Initiative.",
+    "crumbs": [
+      "Best Practices for Dataset Metadata in Ecological Metadata Language (EML)"
+    ]
+  },
+  {
+    "objectID": "guide-eml-bp/preface.html#conventions-and-definitions",
+    "href": "guide-eml-bp/preface.html#conventions-and-definitions",
+    "title": "Best Practices for Dataset Metadata in Ecological Metadata Language (EML)",
+    "section": "Conventions and Definitions",
+    "text": "Conventions and Definitions\n\nAudience\nThis document is intended for data managers. It assumes that readers are familiar with\n\nthe basic structure of an XML document, and the ability to edit in an XML editor like OxygenXML or XMLSpy.\nthe process for contributing data to a repository. If you reached this document from a repository’s help-page, contact them for more information.\n\n\n\nFonts and typeface\nNumbered examples of EML nodes are in fixed-width font:\n&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;\nXML element and attribute names, XPath and references to element names in text are in bold face. Single element names are surrounded by angle brackets, as they appear in XML.\n&lt;dataTable&gt;\n/eml:eml/@packageId\nSome recommendations have special context, e.g., an XML element or attribute may be requested by a community (e.g., LTER), or required by the EDI repository (but not by other repositories).\nContext notes: Recommendations for EML usage in a specific context are called “context notes”, and are placed in separate paragraphs, in italic.\n\n\nDefinitions\nEML preparer: the person responsible for “building” the EML metadata record. Generally, this is a data manager working with a project or physical site that produces data.\nContributor: the research project contributing the data package, e.g., an LTER or OBFS site, or a Macrosystems project. Generally, the “EML preparer” works with or for the “Contributor.”\nData package: the EML metadata together with its entity or entities. This is generally the unit housed in repositories. We use this term to avoid confusion with the EML element “dataset”.\n\n\nOther EML Resources\nSome sections refer to further information or tools. These can be found on the EDI website, under “Resources”, at https://edirepository.org",
     "crumbs": [
       "Best Practices for Dataset Metadata in Ecological Metadata Language (EML)"
     ]
@@ -670,7 +680,7 @@
     "href": "guide-special-cases/preface.html",
     "title": "Data Package Design for Special Cases",
     "section": "",
-    "text": "Considerations for a well designed data package including special cases based on data type, format, or acquisition method. Examples are images, documents, raw data stored in other repositories.",
+    "text": "Preface\nConsiderations for a well designed data package including special cases based on data type, format, or acquisition method. Examples are images, documents, raw data stored in other repositories.\nCite this document as:\nGries, Corinna, Stace Beaulieu, Renee F Brown, Sarah Elmendorf, Hap Garritt, Gastil Gastil-Buhl, Hsun-Yi Hsieh, et al. 2021. “Data Package Design for Special Cases.” Environmental Data Initiative. https://doi.org/10.6073/PASTA/9D4C803578C3FBCB45FC23F13124D052.",
     "crumbs": [
       "Data Package Design for Special Cases"
     ]
@@ -678,11 +688,11 @@
   {
     "objectID": "guide-domain-specific/preface.html",
     "href": "guide-domain-specific/preface.html",
-    "title": "Scientific domain specific metadata guide",
+    "title": "Scientific Domain-Specific Metadata Guide",
     "section": "",
-    "text": "Very much a work in progress.\nRecommendations for community-developed data products from specific scientific domains. Not all scientific domains are covered. The data packages are derived from raw data and reformatted to meet certain data harmonization standards. Many of these data products have extensive related code bases, which recommendations can take into account and link to.",
+    "text": "Preface\nVery much a work in progress.\nRecommendations for community-developed data products from specific scientific domains. Not all scientific domains are covered. The data packages are derived from raw data and reformatted to meet certain data harmonization standards. Many of these data products have extensive related code bases, which recommendations can take into account and link to.",
     "crumbs": [
-      "Scientific domain specific metadata guide"
+      "Scientific Domain-Specific Metadata Guide"
     ]
   }
 ]
