@@ -1,4 +1,4 @@
-# 5. The project tree
+# The project tree
 
 Use the &lt;**project**> tree to describe the project under which the dataset was created. This element is an EML ResearchProjectType (see Appendix 2) and it is therefore possible to include a large range of structured child elements within a **&lt;project>** tree. We recommend focusing on a few key descriptive child elements (project title, abstract, and key personnel), and funding information, which are described below. There are optional child elements for describing the study area and project design (&lt;**studyAreaDescription**> and &lt;**designDescription**>), but if those descriptions are important and can be kept brief, we recommend putting them in the project abstract instead (**/eml:eml/dataset/project/abstract**).
 

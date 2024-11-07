@@ -1,4 +1,4 @@
-# 3. General dataset information
+# General dataset information
 
 The elements below are required or recommended to provide general information about the dataset and the resources it contains. All of these will be most useful when placed as direct child elements of &lt;**dataset**>.
 

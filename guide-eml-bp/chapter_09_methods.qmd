@@ -1,4 +1,4 @@
-# 9. Methods
+# Methods
 
 The methods and procedures used to generate data objects should be described in the EML &lt;**methods**> tree and its child elements. As a ‘rule of thumb,’ the content of the &lt;**methods**> tree is intended to be human readable instead of machine-readable, and should fully describe all steps used when collecting and processing the data. When these steps follow an established protocol, references to external sources, such as a published article (with DOI) containing the methods, may be given, but in most cases it is preferable to include detailed methods descriptions that can be readily browsed, indexed for searching, and will remain available with the data even if links to external documents fail. In addition to content in EML &lt;**methods**>, images, documentation files (e.g. txt or pdf), or code illustrating methods may be included as “other entities” in your dataset. Although the &lt;**methods>** tree can appear at the &lt;**dataset**>, entity, and &lt;**attributes**> levels, it is recommended to describe all methods used at the dataset level. This recommendation assures that a data reuser can find all important information in one place.
 
@@ -119,7 +119,7 @@ There are two other optional children of the &lt;**methods**> element: &lt;**sam
 Figure 9.1 This flowchart outlines decision points for what children and content to include in an EML &lt;**methods**> element.
 
 
-![A flowchart for determining the structure and content of a methods element](images/9_Methods_flowchart.png "A flowchart to determine structure and content of an EML methods document")
+![A flowchart for determining the structure and content of a methods element](img/9_Methods_flowchart.png "A flowchart to determine structure and content of an EML methods document")
 
 
 ## XPaths referenced in this chapter

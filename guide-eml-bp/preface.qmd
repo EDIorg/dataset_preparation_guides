@@ -1,21 +1,19 @@
 ---
 title:  'EML Best Practices'
 author:
-- Corinna Gries
-- Gabriel Kamener
-- Sage Lichtenwalner
-- Mary Martin
-- Gregory Maurer
-- Margaret O'Brien
-- John Porter
-- Tim Whiteaker
-- and others
+  - name: Corinna Gries
+  - name: Gabriel Kamener
+  - name: Sage Lichtenwalner
+  - name: Mary Martin
+  - name: Gregory Maurer
+  - name: Margaret O'Brien
+  - name: John Porter
+  - name: Tim Whiteaker
+  - name: and others
 keywords: [ecological metadata language]
 subtitle: Version 4
 date: November 2024
-author: EML Best Practices Committee
 ---
-
 
 # Preface {.unnumbered}
 

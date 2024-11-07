@@ -16,7 +16,7 @@ Because the EML standard is highly flexible and scalable, it soon became clear t
 
 Figure 1: Ecological Metadata Language timeline and previous revisions of the EML Best Practices document.
 
-![An EML event timeline drawing](images/EML_event_timeline.png "History of EML and its documentation")
+![An EML event timeline drawing](img/EML_event_timeline.png "History of EML and its documentation")
 
 The current document is the fourth version of the EML Best Practices. Many contributed to earlier versions of this document, including LTER Information Managers, personnel from the Environmental Data Initiative data repository (EDI) and NCEAS, and others. We appreciate these contributions and acknowledge that the current document is built on the work, research, and hard-won experience of many who came before.
 

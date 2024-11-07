@@ -1,4 +1,4 @@
-# 2. Metadata and dataset design principles 
+# Metadata and dataset design principles 
 
 
 ## Definition and Structure of a Dataset

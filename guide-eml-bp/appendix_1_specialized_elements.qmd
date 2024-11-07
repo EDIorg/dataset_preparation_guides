@@ -1,4 +1,4 @@
-# Appendix 1. Specialized elements
+# Appendix 1. Specialized elements {.unnumbered}
 
 This appendix covers "specialized" EML elements that are not recommended for most EML applications. These elements are not deprecated or obsolete, but they do have limited use-cases and are fairly rarely used. Best practices for their use have not been determined. Much of the text and most examples come from earlier versions of the EML Best Practices document.
 

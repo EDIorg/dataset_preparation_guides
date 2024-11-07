@@ -1,4 +1,4 @@
-# Appendix 3: Known issues and gotchas in EML
+# Appendix 3: Known issues and gotchas in EML {.unnumbered}
 
 Just bullet points for now
 

@@ -1,4 +1,4 @@
-# 11. Attributes, or variable descriptions
+# Attributes, or variable descriptions
 
 The data entities described by an EML document are typically files containing some kind of research or monitoring data. As such, these data entities hold one or more variables, which are the amounts, characteristics, or other values being measured or controlled during data collection. In EML, a data entity’s variables are referred to as “attributes,” and the _eml-attribute_ module provides EML structures to describe all attributes (variables) within a data entity. Attribute metadata in EML should provide the name and definition of each attribute, its measurement domain, a description of coded values, definitions of missing values, and other pertinent information. All &lt;**dataTable**> entities are required to contain an &lt;**attributeList**> element with this information, as are other, less-commonly used entity types.
 

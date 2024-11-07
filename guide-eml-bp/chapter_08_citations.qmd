@@ -1,4 +1,4 @@
-# 8. Citations and references for datasets
+# Citations and references for datasets
 
 Scholarly research norms call for the attribution of sources in all research works. More recently established open science principles place high value on the reproducibility of research, with the expectation that citation-based links between published research products, such as between journal articles and datasets, will facilitate this. Citation metrics have also become increasingly important for gauging the re-use and impact of any research product, including datasets. The EML standard therefore supports several use-cases for citations and referencing in datasets. 
 

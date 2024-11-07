@@ -1,4 +1,4 @@
-# 6. Data access and usage rights
+# Data access and usage rights
 
 The primary purpose of using EML to describe a dataset is to make the data reusable. While the majority of an EML is devoted to describing the data and their origin, there are also several EML elements used to determine whether, how, and by whom the data should be used. 
 

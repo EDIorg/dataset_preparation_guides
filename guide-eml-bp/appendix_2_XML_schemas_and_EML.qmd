@@ -1,4 +1,4 @@
-# Appendix 2. XML, schemas, and EML
+# Appendix 2. XML, schemas, and EML {.unnumbered}
 
 
 ## What is XML?

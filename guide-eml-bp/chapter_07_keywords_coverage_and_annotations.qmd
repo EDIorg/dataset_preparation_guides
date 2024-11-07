@@ -1,4 +1,4 @@
-# 7. Keywords, coverage, and annotations
+# Keywords, coverage, and annotations
 
 
 ## Keywords (&lt;keywordSet>, &lt;keyword>)
