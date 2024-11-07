@@ -1,0 +1,11 @@
+# Appendix 3: Known issues and gotchas in EML
+
+Just bullet points for now
+
+
+
+* Custom units & Varying capitalization of an attribute
+* Validator problems
+* Id and references - RP id cannot be re-used. 
+* Referring to citations multiple times
+* EDI overwrites entity @id

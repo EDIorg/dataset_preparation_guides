@@ -21,8 +21,21 @@ book:
 
     - part: guide-eml-bp/preface.qmd
       chapters:
-        - guide-eml-bp/introduction.qmd
-        - guide-eml-bp/content-recommendations.qmd
+        - guide-eml-bp/chapter_01_introduction.qmd
+        - guide-eml-bp/chapter_02_metadata_and_dataset_design_principles.qmd
+        - guide-eml-bp/chapter_03_general_dataset_information.qmd
+        - guide-eml-bp/chapter_04_people_and_organizations.qmd
+        - guide-eml-bp/chapter_05_the_project_tree.qmd
+        - guide-eml-bp/chapter_06_data_access_and_usage_rights.qmd
+        - guide-eml-bp/chapter_07_keywords_coverage_and_annotations.qmd
+        - guide-eml-bp/chapter_08_citations.qmd
+        - guide-eml-bp/chapter_09_methods.qmd
+        - guide-eml-bp/chapter_10_data_entities.qmd
+        - guide-eml-bp/chapter_11_attributes_or_variable_descriptions.qmd
+        - guide-eml-bp/chapter_12_additional_metadata.qmd
+        - guide-eml-bp/appendix_1_specialized_elements.qmd
+        - guide-eml-bp/appendix_2_XML_schemas_and_EML.qmd
+        - guide-eml-bp/appendix_3_known_issues_and_gotchas.qmd
 
     - part: guide-special-cases/preface.qmd
       chapters: 
